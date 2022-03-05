@@ -4,17 +4,22 @@ import React from 'react';
 // DATA IMPORTS
 import riders from '../data/Riders';
 
+// COMPONENT IMPORTS
+import RiderCard from '../components/RiderCard';
+
 const Riders = () => {
   return (
     <div className="riders">
       <h1>Riders</h1>
-      {
-        riders.map((rider) => {
-          return (
-            rider.first_name
-          )
-        })
-      }
+      <div className="d-flex flex-wrap">
+        {
+          riders.map((rider) => {
+            return (
+              <RiderCard rider={rider} />
+            )
+          })
+        }
+      </div>
     </div>
   );
 };
