@@ -1,14 +1,15 @@
+// CONFIG IMPORTS
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// import pages
+// PAGE IMPORTS
 import Contest from './pages/Contest';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
 import Photos from './pages/Photos';
 import Riders from './pages/Riders';
 
-// import components
+// COMPONENT IMPORTS
 
 const App = () => {
   return (
