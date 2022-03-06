@@ -113,7 +113,7 @@ a {
   color: var(--prim-color);
   cursor: pointer;
 
-  &:visited, &:hover {
+  &:hover {
     color: var(--darker-prim-color);
   }
 }

@@ -29,8 +29,8 @@ const App = () => {
           <Route path="/photos" exact="true" element={<Photos />} />
           <Route path="/riders" exact="true" element={<Riders />} />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </div>
   );
 }

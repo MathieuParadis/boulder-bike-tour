@@ -6,4 +6,14 @@
   .logo {
     width: 160px;
   }
+
+  .navlink {
+    text-decoration: none;
+    color: var(--prim-color);
+    cursor: pointer;
+  
+    &:hover {
+      color: var(--darker-prim-color);
+    }
+  }
 }

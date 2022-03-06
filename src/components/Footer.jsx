@@ -1,5 +1,6 @@
 // CONFIG IMPORTS
 import React from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 // ASSETS IMPORTS
 import logo from '../assets/logos/logo.svg';
@@ -17,7 +18,15 @@ const Footer = () => {
         </div>
         <div>
           <h5 className="mb-3"><strong>Resources</strong></h5>
-
+          <p className="mb-1">
+            <NavLink exact="true" to="/contact" className="navlink">Contact</NavLink>
+          </p>
+          <p className="mb-1">
+            <NavLink exact="true" to="/community" className="navlink">Community</NavLink>
+          </p>
+          <p className="mb-1">
+            <NavLink exact="true" to="/donate" className="navlink">Donate</NavLink>
+          </p>
         </div>
         <div>
           <h5 className="mb-3"><strong>Partners</strong></h5>
@@ -25,7 +34,7 @@ const Footer = () => {
             <a href="https://www.redbull.com/" target="_blank">Red Bull</a>
           </p>
           <p className="mb-1">
-            <a href="https://www.pro-bikegear.com/" target="_blank">PRo Bikegear</a>
+            <a href="https://www.pro-bikegear.com/" target="_blank">PRO Bikegear</a>
           </p>
           <p className="mb-1">
             <a href="https://www.canyon.com/" target="_blank">Canyon</a>
