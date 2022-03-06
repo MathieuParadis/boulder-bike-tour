@@ -44,9 +44,9 @@ const Footer = () => {
         </div>
         <div>
           <h5 className="mb-3"><strong>Follow us</strong></h5>
-          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
-          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
-          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
+          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" className="navlink"/>
+          <FontAwesomeIcon icon="fa-brands fa-instagram" size="3x" className="mx-3 navlink"/>
+          <FontAwesomeIcon icon="fa-brands fa-twitter-square" size="3x" className="navlink"/>
         </div>
       </div>
     </div>
