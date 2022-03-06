@@ -1,6 +1,8 @@
 // CONFIG IMPORTS
 import React from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 // ASSETS IMPORTS
 import logo from '../assets/logos/logo.svg';
@@ -8,7 +10,7 @@ import logo from '../assets/logos/logo.svg';
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+      <div className="d-flex flex-column flex-lg-row justify-content-between">
         <img src={logo} alt="Boulder Bike Tour logo" className="logo" />
         <div>
           <h5 className="mb-3"><strong>BBT Sport center</strong></h5>
@@ -42,7 +44,9 @@ const Footer = () => {
         </div>
         <div>
           <h5 className="mb-3"><strong>Follow us</strong></h5>
-
+          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
+          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
+          <FontAwesomeIcon icon="fa-brands fa-facebook-square" size="3x" />
         </div>
       </div>
     </div>
