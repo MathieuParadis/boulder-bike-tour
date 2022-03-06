@@ -10,6 +10,7 @@ import Photos from './pages/Photos';
 import Riders from './pages/Riders';
 
 // COMPONENT IMPORTS
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/riders" exact="true" element={<Riders />} />
         </Routes>
       </Router>
+      <Footer />
     </div>
   );
 }
