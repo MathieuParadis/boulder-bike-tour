@@ -14,6 +14,7 @@ import Riders from './pages/Riders';
 
 // COMPONENT IMPORTS
 import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
 // REACT FONTAWESOME IMPORTS
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -24,6 +25,7 @@ const App = () => {
   return (
     <div className="app">
       <Router>
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/community" exact="true" element={<Community />} />
