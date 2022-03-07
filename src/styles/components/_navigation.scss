@@ -17,6 +17,10 @@
     }
   }
 
+  .active {
+    color: var(--prim-color);
+  }
+
   .social-networks {
     text-decoration: none;
     color: var(--basic-color-dark);
@@ -25,9 +29,7 @@
     transition-property: transform;
   
     &:hover {
-      // transform: scale(1.1);
       transform:rotate(360deg);
-
     }
   }
 
