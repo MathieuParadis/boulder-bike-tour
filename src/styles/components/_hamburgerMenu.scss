@@ -2,25 +2,14 @@
   position: absolute;
   height: 32px;
   width: 30px;
-  top: 45px;
-  right: 110px;
+  top: 30px;
+  right: 65px;
   cursor: pointer;
-  display: none;
   z-index: 11;
+  display: none;
 
   @include mobile_and_tablet {
-    position: absolute;
-    height: 32px;
-    width: 30px;
-    top: 45px;
-    right: 65px;
-    cursor: pointer;
     display: block;
-    z-index: 11;  
-  }
-
-  @include mobile {
-    right: 50px;
   }
 
   .span1, .span2, .span3 {

@@ -15,7 +15,7 @@ const Navigation = () => {
       <HamburgerMenu />
       <div className="d-flex justify-content-between align-items-center">
         <div className="d-flex align-items-center">
-          <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-4 mb-lg-0 me-4 me-xl-5" />
+          <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" />
           <div className="d-none d-lg-flex">
             <NavLink exact="true" to="/" className="navlink h4 me-2 me-xl-4 mb-0">Home</NavLink>
             <NavLink exact="true" to="/photos" className="navlink h4 mx-2 mx-xl-4 mb-0">Photos</NavLink>
