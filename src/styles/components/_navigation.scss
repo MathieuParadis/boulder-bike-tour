@@ -41,5 +41,9 @@
     &:hover {
       background-color: var(--darker-prim-color);    
     }
+
+    .active {
+      background-color: var(--prim-color);    
+    }
   }
 }

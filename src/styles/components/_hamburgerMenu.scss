@@ -45,7 +45,7 @@
   }
 }
 
-.menu {
+.overlay {
   display:none;
 
   @include mobile_and_tablet {
@@ -58,27 +58,70 @@
     visibility: hidden;
     background-color: var(--basic-color-dark);
     opacity: 0;
+    z-index: 9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+
+    &.clicked {
+      visibility: visible;
+      opacity: 0.95;
+    }
+  }
+}
+
+.menu {
+  display:none;
+
+  @include mobile_and_tablet {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
     z-index: 10;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all .5s;
 
-
     &.clicked {
       visibility: visible;
-      opacity: 0.9;
+      opacity: 1;
     }
 
     .menu-link{
-      margin-bottom: 35px;
       font-size: 2.5rem;
-      transition: all .5s;
       text-decoration: none;
       color: var(--basic-color-white);
 
       &:hover{
-        color: var(--lighter-prim-color);
+        color: var(--prim-color);
+      }
+    }
+
+    .social-networks {
+      &:hover{
+        transform:scale(1.1);
+      }
+    }
+
+    .contest-button {
+      font-size: 2.5rem;
+      background-color: var(--prim-color);
+      border-radius: 10px;
+      width: 300px;
+  
+      &:hover {
+        background-color: var(--darker-prim-color);    
+      }
+  
+      .active {
+        background-color: var(--prim-color);    
       }
     }
   }
