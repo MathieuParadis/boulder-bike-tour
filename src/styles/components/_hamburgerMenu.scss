@@ -1,0 +1,103 @@
+.hamburger-box {
+  position: absolute;
+  height: 32px;
+  width: 30px;
+  top: 45px;
+  right: 110px;
+  cursor: pointer;
+  display: none;
+  z-index: 11;
+
+  @include mobile_and_tablet {
+    position: absolute;
+    height: 32px;
+    width: 30px;
+    top: 45px;
+    right: 65px;
+    cursor: pointer;
+    display: block;
+    z-index: 11;  
+  }
+
+  @include mobile {
+    right: 50px;
+  }
+
+  .span1, .span2, .span3 {
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: var(--basic-color-dark);
+    transition: all .5s;
+  }
+
+  .span1 {
+    top: 0;
+    &.clicked{
+      transform: rotate(-45deg) translate(-9px, 7px);
+      background-color: var(--basic-color-white);
+    }
+  }
+  .span2 {
+    top: 14px;
+    &.clicked{
+      transform: rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  .span3 {
+    bottom: 0;
+      &.clicked{
+      transform: rotate(45deg) translate(-12px, -10px);
+      background-color: var(--basic-color-white);
+    }
+  }
+}
+
+.menu {
+  display:none;
+
+  @include mobile_and_tablet {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    visibility: hidden;
+    background-color: var(--basic-color-dark);
+    opacity: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+
+
+    &.clicked {
+      visibility: visible;
+      opacity: 0.9;
+    }
+
+    .menu-link{
+      margin-bottom: 35px;
+      font-size: 2.5rem;
+      transition: all .5s;
+      text-decoration: none;
+      color: var(--basic-color-white);
+
+      &:hover{
+        color: var(--lighter-prim-color);
+      }
+    }
+  }
+}
+
+body {
+  &.clicked {
+    height: 100%;
+    overflow: hidden;
+  }
+}
