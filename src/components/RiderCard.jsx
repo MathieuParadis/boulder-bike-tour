@@ -13,6 +13,7 @@ const RiderCard = ({rider}) => {
           <h3 className="text-center mb-4 h2">{last_name}</h3>
           <p className="text-center mt-2 mb-3 h5"><strong>City: </strong>{city}</p>
           <p className="text-center h5"><strong>State: </strong>{state}</p>
+          <p className="btn-locate-rider text-center h5 my-3 p-3">Locate {first_name}</p>
         </div>
       </div>
     </div>
