@@ -9,7 +9,10 @@ const RiderCard = ({rider}) => {
         <img src={img_url} alt={first_name + " " + last_name + " photo"} />
       </div>
       <div className="card-back">
-        {/* <h3>{first_name + " " + last_name}</h3> */}
+        <div className="overlay"></div>
+        <div className="rider-info">
+          <h3>{first_name + " " + last_name}</h3>
+        </div>
       </div>
     </div>
   );
