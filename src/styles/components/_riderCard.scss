@@ -1,0 +1,14 @@
+.rider-card {
+  .card-front {
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--sec-color);
+    border-radius: 5px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius:4px;
+    }
+  }
+}

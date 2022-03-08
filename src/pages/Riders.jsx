@@ -11,7 +11,7 @@ const Riders = () => {
   return (
     <div className="riders">
       <h1>Riders</h1>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-between align-items-center">
         {
           riders.map((rider) => {
             return (
