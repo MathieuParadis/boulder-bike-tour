@@ -52,30 +52,40 @@
       visibility: visible;
       border-radius: 4px;
 
-      h3 {
+      .name {
+        font-size: 1.75em;
         color: var(--lighter-prim-color);
+
+        @include mobile {
+          font-size: 1.5em;
+        }
       }
 
       p {
         color: var(--basic-color-white);
       }
+
+
+      p.btn-locate-rider {
+        background-color: var(--sec-color);
+        color: var(--basic-color-dark);
+        border-radius: 10px;
+        width: 75%;
+        
+        &:hover {
+          background-color: var(--darker-sec-color);
+          color: var(--basic-color-white);
+        }
+      }
+
+
+
+
     }
 
     &:hover {
       .rider-info {
         transform: translateY(-100%);
-      }
-    }
-
-    p.btn-locate-rider {
-      background-color: var(--sec-color);
-      color: var(--basic-color-dark);
-      border-radius: 10px;
-      width: 75%;
-      
-      &:hover {
-        background-color: var(--darker-sec-color);
-        color: var(--basic-color-white);
       }
     }
   }
