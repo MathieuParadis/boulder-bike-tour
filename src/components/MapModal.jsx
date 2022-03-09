@@ -28,7 +28,6 @@ const MapModal = ({rider}) => {
       closeModal();
   };
 
-
   useEffect(() => {
     if (rider) {
       setCenter([rider.position.lat, rider.position.lgn]);
@@ -43,8 +42,14 @@ const MapModal = ({rider}) => {
         {rider && (
           <>
             <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom} >
-              <Marker width={100} anchor={coordinates} color={color} onClick={() => setHue(hue + 20)} />
               <ZoomControl />
+              <Marker width={100} anchor={coordinates} color={color} onClick={() => setHue(hue + 20)} />
+              <Overlay anchor={coordinates} offset={[0, 0]}>
+                <div>
+                  <div className="bubble">!</div>
+                  <div className="pointer"></div>
+                </div>
+              </Overlay>
             </Map>
           </>
         )}
