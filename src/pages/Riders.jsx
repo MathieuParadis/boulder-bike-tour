@@ -1,13 +1,22 @@
 // CONFIG IMPORTS
-import React from 'react';
+import React, {useState} from 'react';
 
 // DATA IMPORTS
 import riders from '../data/Riders';
 
 // COMPONENT IMPORTS
+import MapModal from '../components/MapModal';
 import RiderCard from '../components/RiderCard';
 
 const Riders = () => {
+  const [currentRider, setCurrentRider] = useState(null);
+
+  const openModal = (rider) => {
+    setCurrentRider(rider);
+    let modal = document.querySelector(".map-modal");
+    modal.style.visibility = 'visible';
+  }
+
   return (
     <div className="riders">
       <h1>Riders</h1>
@@ -16,11 +25,12 @@ const Riders = () => {
         {
           riders.map((rider) => {
             return (
-              <RiderCard rider={rider} key={rider.first_name + " " + rider.last_name}/>
+              <RiderCard rider={rider} setOpenModal={openModal} key={rider.first_name + " " + rider.last_name}/>
             )
           })
         }
       </div>
+      <MapModal rider={currentRider}/>
     </div>
   );
 };
