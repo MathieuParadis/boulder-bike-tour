@@ -16,7 +16,7 @@ const Riders = () => {
         {
           riders.map((rider) => {
             return (
-              <RiderCard rider={rider} />
+              <RiderCard rider={rider} key={rider.first_name + " " + rider.last_name}/>
             )
           })
         }
