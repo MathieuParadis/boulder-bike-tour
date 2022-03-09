@@ -9,11 +9,13 @@ const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets')
 
 const MapModal = ({rider}) => {
 
-  const [center, setCenter] = useState([50.879, 4.6997])
+  // Map Center
+  const [center, setCenter] = useState([40.014984, -105.270546]) // default center: Boulder, Colorado
   const [zoom, setZoom] = useState(14)
+  const [coordinates, setCoordinates] = useState([]) // default center: Boulder, Colorado
 
-  const [hue, setHue] = useState(0)
-  const color = `hsl(${hue % 360}deg 39% 70%)`
+  const [hue, setHue] = useState(0);
+  const color = `hsl(${hue % 360}deg 39% 70%)`;
 
   const closeModal = () => {
     let modal = document.querySelector(".map-modal");
@@ -23,13 +25,14 @@ const MapModal = ({rider}) => {
   window.onclick = (event) => {
     event.target === document.querySelector('.map-modal-overlay') &&
     event.target !== document.querySelector('.map-modal-content') &&
-      closeModal()
+      closeModal();
   };
 
 
   useEffect(() => {
     if (rider) {
-      setCenter([rider.position.lat, rider.position.lgn])
+      setCenter([rider.position.lat, rider.position.lgn]);
+      setCoordinates([rider.position.lat, rider.position.lgn]);
     }
   }, [rider]);
 
@@ -39,13 +42,8 @@ const MapModal = ({rider}) => {
       <div className="map-modal-content">
         {rider && (
           <>
-            <Map
-              provider={maptilerProvider}
-              dprs={[1, 2]} // this provider supports HiDPI tiles
-              center={center}
-              defaultZoom={13}
-              zoom={zoom}
-            >
+            <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom} >
+              <Marker width={100} anchor={coordinates} color={color} onClick={() => setHue(hue + 20)} />
               <ZoomControl />
             </Map>
           </>
