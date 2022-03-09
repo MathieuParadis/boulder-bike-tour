@@ -8,24 +8,37 @@ import { maptiler } from 'pigeon-maps/providers'
 const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets')
 
 const MapModal = ({rider}) => {
+  const modal = document.querySelector(".map-modal");
+  const bubbleRider = document.querySelector(".bubble-rider");
 
-  // Map Center
   const [center, setCenter] = useState([40.014984, -105.270546]) // default center: Boulder, Colorado
-  const [zoom, setZoom] = useState(14)
+  const [zoom, setZoom] = useState(13)
   const [coordinates, setCoordinates] = useState([]) // default center: Boulder, Colorado
 
-  const [hue, setHue] = useState(0);
-  const color = `hsl(${hue % 360}deg 39% 70%)`;
+  const displayBubbleRiderInfo = () => {
+    bubbleRider.style.visibility = 'visible';
+  }
+
+  const closeBubbleRiderInfo = () => {
+    bubbleRider.style.visibility = 'hidden';
+  }
 
   const closeModal = () => {
-    let modal = document.querySelector(".map-modal");
     modal.style.visibility = "hidden";
   }
 
   window.onclick = (event) => {
     event.target === document.querySelector('.map-modal-overlay') &&
     event.target !== document.querySelector('.map-modal-content') &&
-      closeModal();
+    closeModal();
+
+    event.target === document.querySelector('.map-modal-overlay') &&
+    event.target !== document.querySelector('.map-modal-content') &&
+    closeBubbleRiderInfo();
+
+    event.target === document.querySelector('.pigeon-overlays') &&
+    closeBubbleRiderInfo();
+
   };
 
   useEffect(() => {
@@ -41,11 +54,11 @@ const MapModal = ({rider}) => {
       <div className="map-modal-content">
         {rider && (
           <>
-            <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom} >
+            <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom}>
               <ZoomControl />
-              <Marker width={100} anchor={coordinates} color={color} onClick={() => setHue(hue + 20)} />
+              <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} className="marker" />
               <Overlay anchor={coordinates} offset={[0, 0]}>
-                <div>
+                <div className="bubble-rider">
                   <div className="bubble">!</div>
                   <div className="pointer"></div>
                 </div>

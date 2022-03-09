@@ -33,19 +33,17 @@
     overflow: hidden;
   }
 
+  .bubble-rider {
+    visibility: hidden;
+    z-index: 22;
 
-}
-
-
-.bubble {
-  height: 250px;
-  width: 40%;
-  min-width: 200px;
-  background: ivory;
-  display: block;
-  margin: 0 auto;
-  border-radius: 20px;
-  margin-top: 50px;
-  font-size: 200px;
-  text-align: center;
+    .bubble {
+      height: 200px;
+      width: 20%;
+      min-width: 200px;
+      background: ivory;
+      border-radius: 20px;
+      text-align: center;
+    }
+  }
 }
