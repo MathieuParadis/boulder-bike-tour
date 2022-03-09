@@ -1,10 +1,13 @@
 .locations {
+  height: 80vh;
+  width: 100%;
+  border: 2px solid var(--sec-color);
+  border-radius: 10px;
+  overflow: hidden;
 
-  border: 2px solid black;
 
-}
 
-.test {
-  background-color: white;
-  transform: translate(100px, 100px);
+
+
+
 }

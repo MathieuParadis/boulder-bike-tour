@@ -3,17 +3,17 @@ import React, {useState, useEffect} from 'react';
 
 // PIGEON MAPS IMPORTS
 import { Map, ZoomControl, Marker, Overlay } from "pigeon-maps";
-import { maptiler } from 'pigeon-maps/providers'
+import { maptiler } from 'pigeon-maps/providers';
 
-const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets')
+const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets');
 
 const MapModal = ({rider}) => {
   const modal = document.querySelector(".map-modal");
   const bubbleRider = document.querySelector(".bubble-rider");
 
-  const [center, setCenter] = useState([40.014984, -105.270546]) // default center: Boulder, Colorado
-  const [zoom, setZoom] = useState(13)
-  const [coordinates, setCoordinates] = useState([]) // default center: Boulder, Colorado
+  const [center, setCenter] = useState([40.014984, -105.270546]); // default center: Boulder, Colorado
+  const [zoom, setZoom] = useState(13);
+  const [coordinates, setCoordinates] = useState([]);
 
   const displayBubbleRiderInfo = () => {
     bubbleRider.style.visibility = 'visible';
