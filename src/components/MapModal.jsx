@@ -59,8 +59,13 @@ const MapModal = ({rider}) => {
               <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} className="marker" />
               <Overlay anchor={coordinates} offset={[0, 0]}>
                 <div className="bubble-rider">
-                  <div className="bubble">!</div>
                   <div className="pointer"></div>
+                  <div className="bubble d-flex flex-column justify-content-around align-items-center">
+                    <h3 className="m-0">{rider.first_name}</h3>
+                    <h3 className="m-0">{rider.last_name}</h3>
+                    <p className="m-0"><strong>Lat: </strong>{rider.position.lat}</p>
+                    <p className="m-0"><strong>Lgn: </strong>{rider.position.lgn}</p>
+                  </div>
                 </div>
               </Overlay>
             </Map>

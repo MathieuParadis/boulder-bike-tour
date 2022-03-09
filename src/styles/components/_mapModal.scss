@@ -35,15 +35,34 @@
 
   .bubble-rider {
     visibility: hidden;
-    z-index: 22;
+    transform: translate(70px, -120px);
+
+    @include mobile_and_tablet {
+      transform: translate(-100px, 30px);
+    }
 
     .bubble {
-      height: 200px;
-      width: 20%;
-      min-width: 200px;
-      background: ivory;
-      border-radius: 20px;
+      position: absolute;
+      height: 170px;
+      width: 200px;
+      background: white;
+      border-radius: 10px;
       text-align: center;
+    }
+
+    .pointer {
+      position: absolute;
+      top: 65px;
+      left: -10px;
+      height: 40px;
+      width: 40px;
+      background: white;
+      transform: rotate(45deg);
+
+      @include mobile_and_tablet {
+        top: -10px;
+        left: 80px;
+      }
     }
   }
 }
