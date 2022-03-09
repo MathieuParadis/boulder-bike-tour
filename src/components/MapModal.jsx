@@ -1,7 +1,19 @@
 // CONFIG IMPORTS
-import React from 'react';
+import React, {useState} from 'react';
+
+// PIGEON MAPS IMPORTS
+import { Map, ZoomControl, Marker, Overlay } from "pigeon-maps";
 
 const MapModal = ({rider}) => {
+
+  const [center, setCenter] = useState([50.879, 4.6997])
+  const [zoom, setZoom] = useState(11)
+
+  const [hue, setHue] = useState(0)
+  const color = `hsl(${hue % 360}deg 39% 70%)`
+
+
+
   const closeModal = () => {
     let modal = document.querySelector(".map-modal");
     modal.style.visibility = "hidden";
@@ -19,7 +31,25 @@ const MapModal = ({rider}) => {
       <div className="map-modal-content">
         {rider && (
           <>
-            <h1 className="m-0">{rider.first_name}</h1>
+
+
+            <Map 
+              center={center} 
+              zoom={zoom} 
+              onBoundsChanged={({ center, zoom }) => { 
+                setCenter(center) 
+                setZoom(zoom) 
+              }} 
+            >
+              <ZoomControl />
+            </Map>
+
+
+
+
+
+
+
           </>
         )}
       </div>
