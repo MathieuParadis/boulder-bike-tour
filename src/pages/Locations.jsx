@@ -18,7 +18,22 @@ const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets')
 const Locations = () => {
   const [center, setCenter] = useState([40.014984, -105.270546]); // default center: Boulder, Colorado
   const [zoom, setZoom] = useState(12);
-  const [color, setColor] = useState('#ffd700')
+  const [color, setColor] = useState('#ffd700');
+  const [currentRider, setCurrentRider] = useState(null);
+
+  const [coordinates, setCoordinates] = useState([]);
+
+  // useEffect(() => {
+  //   if (rider) {
+  //     setCoordinates([rider.position.lat, rider.position.lgn]);
+  //   }
+  // }, [rider]);
+
+  const displayBubbleRiderInfo = (rider) => {
+    // setColor("#0066cc");
+    // setCurrentRider(rider);
+    alert(rider.first_name);
+  }
 
   return (
     <div className="locations d-flex justify-content-center align-items-center my-4">
@@ -28,26 +43,12 @@ const Locations = () => {
         {
           riders.map((rider) => {
             return (
-              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={color} />
+              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={color} onMouseOver={() => displayBubbleRiderInfo(rider)} />
             )
           })
         }
 
 
-
-
-        {/* <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} className="marker" />
-        <Overlay anchor={coordinates} offset={[0, 0]}>
-          <div className="bubble-rider">
-            <div className="pointer"></div>
-            <div className="bubble d-flex flex-column justify-content-around align-items-center">
-              <h3 className="m-0">{rider.first_name}</h3>
-              <h3 className="m-0">{rider.last_name}</h3>
-              <p className="m-0"><strong>Lat: </strong>{rider.position.lat}</p>
-              <p className="m-0"><strong>Lgn: </strong>{rider.position.lgn}</p>
-            </div>
-          </div>
-        </Overlay> */}
       </Map>
 
     </div>
