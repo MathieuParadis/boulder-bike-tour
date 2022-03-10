@@ -18,34 +18,41 @@ const Locations = () => {
 
   const [center, setCenter] = useState([40.014984, -105.270546]); // default center: Boulder, Colorado
   const [zoom, setZoom] = useState(12);
-  const [color, setColor] = useState('#ffd700');
   const [currentRider, setCurrentRider] = useState("");
+  const [coordinatesBlueMarker, setCoordinatesBlueMarker] = useState([]);
 
   const displayBubbleRiderInfo = (rider) => {
-    // let icon = document.querySelector("svg")[0];
-    // icon.style.fill = "#ffffff";
     bubbleRider.style.visibility = 'visible';
     setCurrentRider(rider);
     setCenter([rider.position.lat, rider.position.lgn]);
-    setZoom(14);
+    setZoom(13);
+    setCoordinatesBlueMarker([rider.position.lat, rider.position.lgn]);
   }
 
   const closeBubbleRiderInfo = () => {
     bubbleRider.style.visibility = 'hidden';
+    setZoom(12);
+    setCenter([40.014984, -105.270546]);
+    setCoordinatesBlueMarker([0,0]);
   }
+
+  window.onclick = (event) => {
+    event.target === document.querySelector('.pigeon-overlays') &&
+    closeBubbleRiderInfo();
+  };
 
   return (
     <div className="locations d-flex justify-content-center align-items-center my-4">
-      
       <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={12} zoom={zoom}>
         <ZoomControl />
         {
           riders.map((rider) => {
             return (
-              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={color} onClick={() => displayBubbleRiderInfo(rider)} />
+              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={'#ffd700'} onClick={() => displayBubbleRiderInfo(rider)} />
             )
           })
         }
+        <Marker width={100} anchor={coordinatesBlueMarker} color={'#3385d6'} />
         <Overlay offset={[0, 0]}>
           <div className="bubble-rider">
             <div className="pointer"></div>
@@ -63,9 +70,7 @@ const Locations = () => {
             </div>
           </div>
         </Overlay>
-
       </Map>
-
     </div>
   );
 };
