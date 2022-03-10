@@ -38,7 +38,6 @@ const MapModal = ({rider}) => {
 
     event.target === document.querySelector('.pigeon-overlays') &&
     closeBubbleRiderInfo();
-
   };
 
   useEffect(() => {
@@ -56,7 +55,7 @@ const MapModal = ({rider}) => {
           <>
             <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom}>
               <ZoomControl />
-              <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} className="marker" />
+              <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} />
               <Overlay anchor={coordinates} offset={[0, 0]}>
                 <div className="bubble-rider">
                   <div className="pointer"></div>

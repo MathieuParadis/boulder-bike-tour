@@ -41,15 +41,6 @@
       transform: translate(-100px, 30px);
     }
 
-    .bubble {
-      position: absolute;
-      height: 170px;
-      width: 200px;
-      background: white;
-      border-radius: 10px;
-      text-align: center;
-    }
-
     .pointer {
       position: absolute;
       top: 65px;
@@ -63,6 +54,15 @@
         top: -10px;
         left: 80px;
       }
+    }
+
+    .bubble {
+      position: absolute;
+      height: 170px;
+      width: 200px;
+      background: white;
+      border-radius: 10px;
+      text-align: center;
     }
   }
 }
