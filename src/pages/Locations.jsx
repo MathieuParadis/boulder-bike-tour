@@ -19,7 +19,7 @@ const Locations = () => {
   const [center, setCenter] = useState([40.014984, -105.270546]); // default center: Boulder, Colorado
   const [zoom, setZoom] = useState(12);
   const [currentRider, setCurrentRider] = useState("");
-  const [coordinatesBlueMarker, setCoordinatesBlueMarker] = useState([]);
+  const [coordinatesBlueMarker, setCoordinatesBlueMarker] = useState([0, 0]);
 
   const displayBubbleRiderInfo = (rider) => {
     bubbleRider.style.visibility = 'visible';
@@ -41,6 +41,10 @@ const Locations = () => {
     closeBubbleRiderInfo();
   };
 
+  useEffect(() => {
+    setCoordinatesBlueMarker([0, 0]);
+  }, []);
+
   return (
     <div className="locations d-flex justify-content-center align-items-center my-4">
       <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={12} zoom={zoom}>
@@ -48,7 +52,7 @@ const Locations = () => {
         {
           riders.map((rider) => {
             return (
-              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={'#ffd700'} onClick={() => displayBubbleRiderInfo(rider)} />
+              <Marker width={100} anchor={[rider.position.lat, rider.position.lgn]} color={'#ffd700'} onClick={() => displayBubbleRiderInfo(rider)} key={rider.first_name + rider.last_name} />
             )
           })
         }

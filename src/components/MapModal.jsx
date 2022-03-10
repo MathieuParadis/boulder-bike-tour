@@ -13,17 +13,14 @@ const MapModal = ({rider}) => {
 
   const [center, setCenter] = useState([40.014984, -105.270546]); // default center: Boulder, Colorado
   const [zoom, setZoom] = useState(13);
-  const [color, setColor] = useState('#ffd700');
   const [coordinates, setCoordinates] = useState([]);
 
   const displayBubbleRiderInfo = () => {
     bubbleRider.style.visibility = 'visible';
-    setColor('#3385d6');
   }
 
   const closeBubbleRiderInfo = () => {
     bubbleRider.style.visibility = 'hidden';
-    setColor('#ffd700');
   }
 
   const closeModal = () => {
@@ -58,7 +55,7 @@ const MapModal = ({rider}) => {
           <>
             <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={13} zoom={zoom}>
               <ZoomControl />
-              <Marker width={100} anchor={coordinates} color={color} onClick={() => displayBubbleRiderInfo()} />
+              <Marker width={100} anchor={coordinates} color={'#ffd700'} onClick={() => displayBubbleRiderInfo()} />
               <Overlay anchor={coordinates} offset={[0, 0]}>
                 <div className="bubble-rider">
                   <div className="pointer"></div>
