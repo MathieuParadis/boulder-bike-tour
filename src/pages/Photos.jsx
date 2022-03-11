@@ -1,7 +1,11 @@
 // CONFIG IMPORTS
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Photos = () => {
+  const [photos, setPhotos] = React.useState(null);
+
+  const photosContainer = document.querySelector('photos-container');
+
   const getPhotosData = () => {
     const url_base = "https://www.flickr.com/services/rest/";
     const method = "flickr.photos.search";
@@ -9,8 +13,6 @@ const Photos = () => {
     const tags = ['bike', 'biking'];
     const url = `${url_base}?method=${method}&api_key=${api_key}&tags=${tags[0]}%2C+${tags[1]}&per_page=40&format=json&nojsoncallback=1&auth_token=72157720835749557-09fa56a1f5066771&api_sig=014926c1bd49b4b0e3e9993667a20c1f`;
   
-    const URL = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=02a2c3456e80bd16280dea2e4004e27b&tags=bike%2C+biking%2C+bread&per_page=40&format=rest&auth_token=72157720835761134-f7d2ed54f9d9c21b&api_sig=48de0f68401f3a8e12c21ef82e220353'
-
     fetch(url, {
       method: "GET",
     })
@@ -19,37 +21,37 @@ const Photos = () => {
         console.error('Error:', error);
     })
     .then(response => {
-        console.log("first way");
         console.log(response);
+        setPhotos(response.photos.photo[0]);
+        console.log(response.photos.photo)
     });
 
   }
 
-  const displayPhoto = (photoData) => {
-    const server = photoData.server;
-    const id = photoData.id;
-    const secret = photoData.secret;
-    const title = photoData.title;
-
+  const displayPhoto = (photo_data) => {
+    const {server, id, secret, title} = photo_data
     return (
       <img src={`https://live.staticflickr.com/${server}/${id}_${secret}.jpg`} alt={title} />
     )
   }
 
   const displayPhotos = (photos) => {
-    photos.photo.map((photo) => {
-      displayPhoto(photo);
-    })
+    photos.map((photo) => displayPhoto(photo))
   }
 
 
-getPhotosData();
 
-
+  useEffect(() => {
+    getPhotosData();
+  }, []);
+  
 
   return (
     <div className="photos">
       <div className="photos-container">
+        { photos && 
+          displayPhoto(photos)
+        }
 
       </div>
     </div>
