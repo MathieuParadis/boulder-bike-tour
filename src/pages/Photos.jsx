@@ -4,8 +4,6 @@ import React, {useEffect, useState} from 'react';
 const Photos = () => {
   const [photos, setPhotos] = React.useState(null);
 
-  const photosContainer = document.querySelector('photos-container');
-
   const getPhotosData = () => {
     const url_base = "https://www.flickr.com/services/rest/";
     const method = "flickr.photos.search";
@@ -22,37 +20,31 @@ const Photos = () => {
     })
     .then(response => {
         console.log(response);
-        setPhotos(response.photos.photo[0]);
-        console.log(response.photos.photo)
+        setPhotos(response.photos.photo);
     });
-
   }
 
-  const displayPhoto = (photo_data) => {
-    const {server, id, secret, title} = photo_data
+  const displaySinglePhoto = (photo_data) => {
+    const {server, id, secret, title} = photo_data;
     return (
-      <img src={`https://live.staticflickr.com/${server}/${id}_${secret}.jpg`} alt={title} />
+      <img src={`https://live.staticflickr.com/${server}/${id}_${secret}.jpg`} alt={title} key={id} />
     )
   }
 
   const displayPhotos = (photos) => {
-    photos.map((photo) => displayPhoto(photo))
+    return photos.map((photo) => displaySinglePhoto(photo));
   }
-
-
 
   useEffect(() => {
     getPhotosData();
   }, []);
   
-
   return (
     <div className="photos">
       <div className="photos-container">
         { photos && 
-          displayPhoto(photos)
+          displayPhotos(photos)
         }
-
       </div>
     </div>
   );
