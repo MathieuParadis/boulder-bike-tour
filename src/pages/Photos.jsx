@@ -39,11 +39,13 @@ const Photos = () => {
   }
   
   const displayNextPage = () => {
-    // page_number += 1;
     setPage(page + 1);
-    // getPhotosData(page_number);
-    // alert(page_number);
-    // getPhotosData(12);
+    window.scrollTo(0, 0)
+  }
+
+  const displayPreviousPage = () => {
+    setPage(page - 1);
+    window.scrollTo(0, 0)
   }
 
   useEffect(() => { 
@@ -63,9 +65,20 @@ const Photos = () => {
               })
             }
           </div>
-          <button onClick={() => displayNextPage()}>Next page</button>      
-          Page: {currentPage} / {totalPages}
-          Page: {page} / {totalPages}
+          {
+            currentPage !== 1 &&
+            <>
+              <button onClick={() => displayPreviousPage()}>Previous page</button>      
+              Page: {currentPage} / {totalPages}
+            </>
+          }
+          {
+            currentPage !== totalPages &&
+            <>
+              <button onClick={() => displayNextPage()}>Next page</button>      
+              Page: {currentPage} / {totalPages}
+            </>
+          }
 
         </>
       }
