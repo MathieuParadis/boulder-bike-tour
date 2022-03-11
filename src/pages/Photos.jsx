@@ -8,11 +8,15 @@ const Photos = () => {
   const [photos, setPhotos] = React.useState(null);
 
   const getPhotosData = () => {
+    const base_url = 'https://www.flickr.com/services/rest/';
+    const method = 'flickr.photos.search';
     const api_key = "02a2c3456e80bd16280dea2e4004e27b";
-    let page = 6;
-    // const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${api_key}&tags=mountain-bike%2C+bike%2C+race%2C+mountain%2C+colorado%2C&tag_mode=all&per_page=40&page=${page}&format=json&nojsoncallback=1&auth_token=72157720835761134-f7d2ed54f9d9c21b&api_sig=b8d8f4ab9da81ca4b502eff15120e630`
+    const tags_array = ['mountain-bike', 'bike', 'race', 'colorado', 'mountain'];
+    const tags = `${tags_array[0]}%2C+${tags_array[1]}%2C+${tags_array[2]}%2C+${tags_array[3]}%2C+${tags_array[4]}%2C`;
+    const per_page = 40;
+    let page = 1;
 
-    const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${api_key}&tags=mountain-bike%2C+bike%2C+race%2C+mountain%2C+colorado%2C&tag_mode=all&per_page=40&page=${page}&format=json&nojsoncallback=1`
+    const url = `${base_url}?method=${method}&api_key=${api_key}&tags=${tags}&tag_mode=all&per_page=${per_page}&page=${page}&format=json&nojsoncallback=1`
 
     fetch(url, {
       method: "GET",
