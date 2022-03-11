@@ -1,6 +1,9 @@
 // CONFIG IMPORTS
 import React, {useEffect, useState} from 'react';
 
+// COMPONENT IMPORTS
+import PhotoContainer from '../components/PhotoContainer';
+
 const Photos = () => {
   const [photos, setPhotos] = React.useState(null);
 
@@ -24,17 +27,6 @@ const Photos = () => {
     });
   }
 
-  const displaySinglePhoto = (photo_data) => {
-    const {server, id, secret, title} = photo_data;
-    return (
-      <img src={`https://live.staticflickr.com/${server}/${id}_${secret}.jpg`} alt={title} key={id} />
-    )
-  }
-
-  const displayPhotos = (photos) => {
-    return photos.map((photo) => displaySinglePhoto(photo));
-  }
-
   useEffect(() => {
     getPhotosData();
   }, []);
@@ -42,9 +34,15 @@ const Photos = () => {
   return (
     <div className="photos">
       <div className="photos-container">
-        { photos && 
-          displayPhotos(photos)
+        <div className="d-flex flex-wrap justify-content-between align-items-center">
+        { photos &&
+          photos.map((photo) => {
+            return (
+              <PhotoContainer photo={photo} key={photo.id} />
+            )
+          })
         }
+        </div>
       </div>
     </div>
   );
