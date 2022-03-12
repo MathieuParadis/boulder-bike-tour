@@ -1,5 +1,7 @@
 // CONFIG IMPORTS
 import React, {useEffect, useState} from 'react';
+import ReactLoading from 'react-loading';
+
 
 // COMPONENT IMPORTS
 import PhotoContainer from '../components/PhotoContainer';
@@ -16,7 +18,7 @@ const Photos = () => {
   const getPhotosData = (page) => {
     const base_url = 'https://www.flickr.com/services/rest/';
     const method = 'flickr.photos.search';
-    const api_key = "02a2c3456e80bd16280dea2e4004e27b";
+    const api_key = "2d71c75e37a109ab80db6aedaa6b2044";
     const tags_array = ['mountain-bike', 'bike', 'race', 'colorado', 'mountain'];
     const tags = `${tags_array[0]}%2C+${tags_array[1]}%2C+${tags_array[2]}%2C+${tags_array[3]}%2C+${tags_array[4]}%2C`;
     const per_page = 40;
@@ -54,33 +56,38 @@ const Photos = () => {
   
   return (
     <div className="photos py-3">
-      { photos && photos.length > 0 &&
-        <>
-          <div className="photos-container d-flex flex-wrap justify-content-between align-items-center">
+      { photos && photos.length > 0 ?
+        (
+          <>
+            <div className="photos-container d-flex flex-wrap justify-content-between align-items-center">
+              {
+                photos.map((photo) => {
+                  return (
+                    <PhotoContainer photo={photo} key={photo.id} />
+                  )
+                })
+              }
+            </div>
             {
-              photos.map((photo) => {
-                return (
-                  <PhotoContainer photo={photo} key={photo.id} />
-                )
-              })
+              currentPage !== 1 &&
+              <>
+                <button onClick={() => displayPreviousPage()}>Previous page</button>      
+              </>
             }
+            {
+              currentPage !== totalPages &&
+              <>
+                <button onClick={() => displayNextPage()}>Next page</button>      
+              </>
+            }
+            Page: {currentPage} / {totalPages}
+          </>
+        ) : 
+        (
+          <div className="d-flex justify-content-center align-items-center">
+            <ReactLoading type={"spinningBubbles"} color={"#3385d6"} height={'20%'} width={'20%'} />
           </div>
-          {
-            currentPage !== 1 &&
-            <>
-              <button onClick={() => displayPreviousPage()}>Previous page</button>      
-              Page: {currentPage} / {totalPages}
-            </>
-          }
-          {
-            currentPage !== totalPages &&
-            <>
-              <button onClick={() => displayNextPage()}>Next page</button>      
-              Page: {currentPage} / {totalPages}
-            </>
-          }
-
-        </>
+        )
       }
     </div>
   );
