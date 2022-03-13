@@ -45,6 +45,10 @@ const Locations = () => {
     setCoordinatesBlueMarker([0, 0]);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="locations d-flex justify-content-center align-items-center my-4">
       <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={12} zoom={zoom}>

@@ -52,6 +52,10 @@ const Photos = () => {
   useEffect(() => { 
     getPhotosData(page);
   }, [page]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   return (
     <div className="photos py-3">

@@ -1,6 +1,11 @@
-import React from 'react';
+// CONFIG IMPORTS
+import React, {useEffect} from 'react';
 
 const Race = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="race">
       race

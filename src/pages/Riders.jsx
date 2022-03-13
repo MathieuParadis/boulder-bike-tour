@@ -1,5 +1,5 @@
 // CONFIG IMPORTS
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactLoading from 'react-loading';
 
 // DATA IMPORTS
@@ -17,6 +17,10 @@ const Riders = () => {
     let modal = document.querySelector(".map-modal");
     modal.style.visibility = 'visible';
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="riders">

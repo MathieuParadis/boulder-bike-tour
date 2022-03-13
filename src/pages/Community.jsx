@@ -1,6 +1,11 @@
-import React from 'react';
+// CONFIG IMPORTS
+import React, {useEffect} from 'react';
 
 const Community = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="community">
       community

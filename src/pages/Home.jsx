@@ -1,5 +1,5 @@
 // CONFIG IMPORTS
-import React from 'react';
+import React, {useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 
 // ASSETS IMPORTS
@@ -8,6 +8,9 @@ import area from '../assets/images/area_illustration.jpg';
 import volunteer from '../assets/images/volunteer illustration.jpeg';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="home">
