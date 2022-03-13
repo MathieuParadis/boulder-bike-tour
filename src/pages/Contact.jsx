@@ -15,6 +15,9 @@ const Contact = () => {
   return (
     <div className="contact">
       <Banner img={contact_banner} title="Contact" />
+      <div className="contact-content">
+        content
+      </div>
     </div>
   );
 };
