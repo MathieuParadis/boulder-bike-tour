@@ -17,10 +17,50 @@
       background-image: url("../../assets/images/homepage_bg.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
+      filter: brightness(60%);
 
       @include mobile_and_tablet {
-        background-image: url("../../assets/images/homepage_bg_mb.jpeg");      
+        background-image: url("../../assets/images/homepage_bg_mb.jpeg");
+        filter: brightness(70%);
       }
     }
   }
+
+  .box-section {
+    margin: 0 -70px 0 -70px;
+    
+    @include mobile_and_tablet {
+      margin: 0 -45px 0 -45px;
+    }
+
+    .colored-bg {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 60vh;
+      width: 100%;
+      background-color: var(--lighter-sec-color);
+    }
+
+    .boxes {
+      margin: 0 70px 0 70px;
+      width: 100%;
+    
+      @include mobile_and_tablet {
+        margin: 0 45px 0 45px;
+      }
+
+      .box-content {
+        border: 2px solid var(--prim-color);
+
+        // img {
+
+        // }
+      }
+    }
+  }
+
+
+
+
 }

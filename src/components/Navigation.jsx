@@ -49,7 +49,7 @@ const Navigation = () => {
           </div>
         </div>
         <div className="navbar-bottom d-none d-lg-flex justify-content-between">
-          <div>
+          <div className="d-flex justify-content-center align-items-center">
             <NavLink exact="true" to="/" className="navlink h5 me-2 me-xl-4 mb-0">Home</NavLink>
             <NavLink exact="true" to="/race" className="navlink h5 mx-2 mx-xl-4 mb-0">Race</NavLink>
             <NavLink exact="true" to="/area" className="navlink h5 mx-2 mx-xl-4 mb-0">About the area</NavLink>
@@ -57,8 +57,8 @@ const Navigation = () => {
             <NavLink exact="true" to="/riders" className="navlink h5 mx-2 mx-xl-4 mb-0">Riders</NavLink>
             <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
           </div>
-          <div>
-            <p className="date h5">April 01, 2022</p>
+          <div className="d-flex justify-content-center align-items-center">
+            <p className="date h5 m-0">April 01, 2022</p>
           </div>
         </div>
       </div>
