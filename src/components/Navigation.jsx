@@ -37,13 +37,18 @@ const Navigation = () => {
             <NavLink exact="true" to="/contest" className="contest-button h4 ms-4 ms-xl-5 p-3 mb-0 text-white text-center">Join contest</NavLink>
           </div>
         </div>
-        <div className="navbar-bottom d-none d-lg-flex">
-          <NavLink exact="true" to="/" className="navlink h5 me-2 me-xl-4 mb-0">Home</NavLink>
-          <NavLink exact="true" to="/race" className="navlink h5 mx-2 mx-xl-4 mb-0">Race</NavLink>
-          <NavLink exact="true" to="/area" className="navlink h5 mx-2 mx-xl-4 mb-0">About the area</NavLink>
-          <NavLink exact="true" to="/photos" className="navlink h5 mx-2 mx-xl-4 mb-0">Gallery</NavLink>
-          <NavLink exact="true" to="/riders" className="navlink h5 mx-2 mx-xl-4 mb-0">Riders</NavLink>
-          <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
+        <div className="navbar-bottom d-none d-lg-flex justify-content-between">
+          <div>
+            <NavLink exact="true" to="/" className="navlink h5 me-2 me-xl-4 mb-0">Home</NavLink>
+            <NavLink exact="true" to="/race" className="navlink h5 mx-2 mx-xl-4 mb-0">Race</NavLink>
+            <NavLink exact="true" to="/area" className="navlink h5 mx-2 mx-xl-4 mb-0">About the area</NavLink>
+            <NavLink exact="true" to="/photos" className="navlink h5 mx-2 mx-xl-4 mb-0">Gallery</NavLink>
+            <NavLink exact="true" to="/riders" className="navlink h5 mx-2 mx-xl-4 mb-0">Riders</NavLink>
+            <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
+          </div>
+          <div>
+            <p className="date h5">April 01, 2022</p>
+          </div>
         </div>
       </div>
     </>

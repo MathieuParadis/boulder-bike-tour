@@ -1,11 +1,17 @@
 // CONFIG IMPORTS
 import React from 'react';
 
+// ASSETS IMPORTS
+import homepage_bg from '../assets/images/homepage_bg.jpeg';
+
 const Home = () => {
 
   return (
     <div className="home">
-      <h1>Home page</h1>
+      <div className="hero-section">
+        <div className="bg-picture"></div>
+        {/* <img src={homepage_bg} /> */}
+      </div>
     </div>
   );
 };
