@@ -43,7 +43,7 @@ const Navigation = () => {
           <NavLink exact="true" to="/area" className="navlink h5 mx-2 mx-xl-4 mb-0">About the area</NavLink>
           <NavLink exact="true" to="/photos" className="navlink h5 mx-2 mx-xl-4 mb-0">Gallery</NavLink>
           <NavLink exact="true" to="/riders" className="navlink h5 mx-2 mx-xl-4 mb-0">Riders</NavLink>
-          <NavLink exact="true" to="/locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
+          <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
         </div>
       </div>
     </>

@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import ReactLoading from 'react-loading';
 
-
 // COMPONENT IMPORTS
 import PhotoContainer from '../components/PhotoContainer';
 
