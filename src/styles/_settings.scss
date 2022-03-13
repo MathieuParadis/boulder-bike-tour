@@ -98,10 +98,15 @@ html {
 body {
   min-height: 100vh;
   width: 100%;
-  margin: 20px 45px;
+  margin: 20px 70px;
   font-family: $font-1;
   background-color: var(--basic-color-white);
   color: var(--basic-color-dark);
+
+  @include mobile_and_tablet {
+    margin: 20px 45px;
+
+  }
 }
 
 li {

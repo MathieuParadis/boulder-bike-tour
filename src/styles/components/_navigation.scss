@@ -1,49 +1,70 @@
 .navigation {
   background-color: var(--light-bg-color);
-  margin: -20px -45px 0 -45px;
-  padding: 15px 45px;
+  margin: -20px -70px 0 -70px;
 
-  .logo {
-    width: 200px;
+  @include mobile_and_tablet {
+    margin: -20px -45px 0 -45px;
   }
 
-  .navlink {
-    text-decoration: none;
-    color: var(--basic-color-grey-dark);
-    cursor: pointer;
+  .navbar-top {
+    padding: 15px 70px;
+
+    @include mobile_and_tablet {
+      padding: 15px 45px;
+    }
+
+    .logo {
+      width: 200px;
+    }
   
-    &:hover {
-      color: var(--prim-color);
+    .social-networks {
+      text-decoration: none;
+      color: var(--basic-color-dark);
+      cursor: pointer;
+      transition-duration: 1s;
+      transition-property: transform;
+    
+      &:hover {
+        transform:rotate(360deg);
+      }
     }
-  }
-
-  .active {
-    color: var(--prim-color);
-  }
-
-  .social-networks {
-    text-decoration: none;
-    color: var(--basic-color-dark);
-    cursor: pointer;
-    transition-duration: 1s;
-    transition-property: transform;
   
-    &:hover {
-      transform:rotate(360deg);
+    .contest-button {
+      background-color: var(--prim-color);
+      border-radius: 10px;
+      width: 200px;
+  
+      &:hover {
+        background-color: var(--darker-prim-color);    
+      }
+  
+      .active {
+        background-color: var(--prim-color);    
+      }
     }
   }
 
-  .contest-button {
-    background-color: var(--prim-color);
-    border-radius: 10px;
-    width: 200px;
+  .navbar-bottom {
+    padding: 15px 70px;
+    background-color: var(--lighter-prim-color);
+    height: 60px;
 
-    &:hover {
-      background-color: var(--darker-prim-color);    
+    @include mobile_and_tablet {
+      padding: 15px 45px;
     }
 
+    .navlink {
+      text-decoration: none;
+      color: var(--basic-color-white);
+      cursor: pointer;
+    
+      &:hover {
+        color: var(--sec-color);
+      }
+    }
+  
     .active {
-      background-color: var(--prim-color);    
+      color: var(--sec-color);
     }
   }
 }

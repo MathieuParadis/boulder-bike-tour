@@ -24,10 +24,10 @@ const Footer = () => {
             <NavLink exact="true" to="/contact" className="navlink">Contact</NavLink>
           </p>
           <p className="mb-1">
-            <NavLink exact="true" to="/community" className="navlink">Community</NavLink>
+            <NavLink exact="true" to="/volunteer" className="navlink">Volunteering</NavLink>
           </p>
           <p className="mb-1">
-            <NavLink exact="true" to="/donate" className="navlink">Donate</NavLink>
+            <NavLink exact="true" to="/community" className="navlink">Community</NavLink>
           </p>
         </div>
         <div className="mb-4 mb-lg-0 text-center text-lg-start">

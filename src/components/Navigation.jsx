@@ -16,14 +16,11 @@ const Navigation = () => {
     <>
       <HamburgerMenu />
       <div className="navigation">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="navbar-top d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" />
-            <div className="d-none d-lg-flex">
-              <NavLink exact="true" to="/" className="navlink h4 me-2 me-xl-4 mb-0">Home</NavLink>
-              <NavLink exact="true" to="/photos" className="navlink h4 mx-2 mx-xl-4 mb-0">Photos</NavLink>
-              <NavLink exact="true" to="/riders" className="navlink h4 ms-2 ms-xl-4 mb-0">Riders</NavLink>
-            </div>
+            <NavLink exact="true" to="/" className="navlink h4 me-2 me-xl-4 mb-0">
+              <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" />
+            </NavLink>
           </div>
           <div className="d-none d-lg-flex align-items-center">
             <div>
@@ -39,6 +36,14 @@ const Navigation = () => {
             </div>
             <NavLink exact="true" to="/contest" className="contest-button h4 ms-4 ms-xl-5 p-3 mb-0 text-white text-center">Join contest</NavLink>
           </div>
+        </div>
+        <div className="navbar-bottom d-none d-lg-flex">
+          <NavLink exact="true" to="/" className="navlink h5 me-2 me-xl-4 mb-0">Home</NavLink>
+          <NavLink exact="true" to="/race" className="navlink h5 mx-2 mx-xl-4 mb-0">Race</NavLink>
+          <NavLink exact="true" to="/area" className="navlink h5 mx-2 mx-xl-4 mb-0">About the area</NavLink>
+          <NavLink exact="true" to="/photos" className="navlink h5 mx-2 mx-xl-4 mb-0">Gallery</NavLink>
+          <NavLink exact="true" to="/riders" className="navlink h5 mx-2 mx-xl-4 mb-0">Riders</NavLink>
+          <NavLink exact="true" to="/locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
         </div>
       </div>
     </>
