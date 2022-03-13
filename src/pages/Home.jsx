@@ -16,8 +16,16 @@ const Home = () => {
     <div className="home">
       <div className="hero-section">
         <div className="bg-picture"></div>
-        <div></div>
+        <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
+          <div className="col-12 col-md-6">
+            <h1>Competition is fierce</h1>
+          </div>
+          <div className="countdown col-12 col-md-6">
+            <p>countdown here</p>
+          </div>
+        </div>
       </div>
+
       <div className="box-section">
         <div className="colored-bg d-flex justify-content-center align-items-center">
           <div className="boxes d-flex flex-wrap flex-row justify-content-center align-items-center">
@@ -42,6 +50,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <div className="contest-section">
 
       </div>

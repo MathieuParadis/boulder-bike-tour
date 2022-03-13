@@ -2,6 +2,8 @@
   min-height: 100vh;
 
   .hero-section {
+    position: relative;
+    height: 100vh;
     margin: 0 -70px 0 -70px;
     
     @include mobile_and_tablet {
@@ -9,7 +11,7 @@
     }
 
     .bg-picture {
-      position: relative;
+      position: absolute;
       top: 0;
       left: 0;
       height: 100vh;
@@ -22,6 +24,23 @@
       @include mobile_and_tablet {
         background-image: url("../../assets/images/homepage_bg_mb.jpeg");
         filter: brightness(70%);
+      }
+    }
+
+    .hero-content {
+      position: absolute;
+      padding: 0 70px 0 70px;
+      width: 100%;
+      z-index: 20;
+    
+      @include mobile_and_tablet {
+        padding: 0 45px 0 45px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: white;
       }
     }
   }
@@ -73,7 +92,6 @@
           color: var(--basic-color-white);
         }
 
-
         &:hover {
           .img-box {
             filter: brightness(100%);
@@ -83,17 +101,14 @@
             display: none;
           }
         }
-
-
-
-
-
-
       }
     }
   }
 
+  .contest-section {
+    min-height: 100vh;
 
 
 
+  }
 }
