@@ -37,7 +37,7 @@
       position: relative;
       top: 0;
       left: 0;
-      height: 60vh;
+      min-height: 60vh;
       width: 100%;
       background-color: var(--lighter-sec-color);
     }
@@ -51,11 +51,44 @@
       }
 
       .box-content {
+        cursor: pointer;
+        position: relative;
         border: 2px solid var(--prim-color);
+        width: 300px;
+        height: 300px;
 
-        // img {
+        .img-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(50%);
+        }
 
-        // }
+        h3 {
+          z-index: 20;
+          font-weight: bold;
+          color: var(--basic-color-white);
+        }
+
+
+        &:hover {
+          .img-box {
+            filter: brightness(100%);
+          }
+
+          h3 {
+            display: none;
+          }
+        }
+
+
+
+
+
+
       }
     }
   }
