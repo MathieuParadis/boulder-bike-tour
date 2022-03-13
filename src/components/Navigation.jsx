@@ -1,6 +1,6 @@
 // CONFIG IMPORTS
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 // REACT FONTAWESOME IMPORTS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,6 +12,17 @@ import HamburgerMenu from './HamburgerMenu';
 import logo from '../assets/logos/logo_name.svg';
 
 const Navigation = () => {
+  const location = useLocation();
+  const navigate = useNavigate()
+
+  const refreshPage = () => {
+    if (location.pathname === '/') {
+      window.location.reload();
+    } else {
+      navigate("/");
+    }
+  }
+
   return (
     <>
       <HamburgerMenu />
@@ -19,7 +30,7 @@ const Navigation = () => {
         <div className="navbar-top d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
             <NavLink exact="true" to="/" className="navlink h4 me-2 me-xl-4 mb-0">
-              <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" />
+              <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" onClick={refreshPage} />
             </NavLink>
           </div>
           <div className="d-none d-lg-flex align-items-center">
