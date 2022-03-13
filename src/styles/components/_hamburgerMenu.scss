@@ -46,7 +46,7 @@
 }
 
 .overlay {
-  display:none;
+  display: none;
 
   @include mobile_and_tablet {
     width: 100%;

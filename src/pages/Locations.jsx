@@ -8,7 +8,11 @@ import { maptiler } from 'pigeon-maps/providers';
 // DATA IMPORTS
 import riders from '../data/Riders';
 
+// COMPONENTS IMPORTS
+import Banner from '../components/Banner';
+
 // ASSETS IMPORTS
+import location_banner from '../assets/images/location_banner.jpg';
 import rider_logo from '../assets/images/rider.svg';
 
 const maptilerProvider = maptiler('IwympTEN2FYbP2g5qdck', 'streets')
@@ -51,6 +55,8 @@ const Locations = () => {
 
   return (
     <div className="locations d-flex justify-content-center align-items-center my-4">
+      {/* <Banner img={location_banner} title="Riders locations" /> */}
+
       <Map provider={maptilerProvider} dprs={[1, 2]} center={center} defaultZoom={12} zoom={zoom}>
         <ZoomControl />
         {

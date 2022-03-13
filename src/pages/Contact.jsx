@@ -1,6 +1,12 @@
 // CONFIG IMPORTS
 import React, {useEffect} from 'react';
 
+// COMPONENTS IMPORTS
+import Banner from '../components/Banner';
+
+// ASSETS IMPORTS
+import contact_banner from '../assets/images/contact_banner.jpeg';
+
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -8,7 +14,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      contact
+      <Banner img={contact_banner} title="Contact" />
     </div>
   );
 };
