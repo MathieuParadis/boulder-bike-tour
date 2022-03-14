@@ -15,9 +15,6 @@ const Race = () => {
   return (
     <div className="race">
       <Banner img={race_banner} title="The Race" />
-      <div className="race-content">
-        content
-      </div>
     </div>
   );
 };

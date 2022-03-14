@@ -15,9 +15,6 @@ const Volunteer = () => {
   return (
     <div className="volunteer">
       <Banner img={volunteer_banner} title="Become a Volunteer" />
-      <div className="volunteer-content">
-        content
-      </div>
     </div>
   );
 };

@@ -15,9 +15,7 @@ const Community = () => {
   return (
     <div className="community">
       <Banner img={community_banner} title="Community" />
-      <div className="community-content">
-        content
-      </div>
+
     </div>
   );
 };

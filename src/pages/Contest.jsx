@@ -15,9 +15,6 @@ const Contest = () => {
   return (
     <div className="contest">
       <Banner img={contest_banner} title="Slogan contest" />
-      <div className="contest-content">
-        content
-      </div>
     </div>
   );
 };

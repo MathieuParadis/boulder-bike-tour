@@ -29,23 +29,21 @@ const Riders = () => {
   return (
     <div className="riders">
       <Banner img={riders_banner} title="Riders" />
-      <div className="riders-content">
-        <div className="d-flex flex-wrap justify-content-between align-items-center">
-          { riders && riders.length > 0 ?
-            (
-              riders.map((rider) => {
-                return (
-                  <RiderCard rider={rider} setOpenModal={openModal} key={rider.first_name + " " + rider.last_name}/>
-                )
-              })
-            ) :
-            (
-              <ReactLoading type={"spinningBubbles"} color={"#3385d6"} height={'20%'} width={'20%'} />
-            )
-          }
-        </div>
-        <MapModal rider={currentRider}/>
+      <div className="d-flex flex-wrap justify-content-between align-items-center">
+        { riders && riders.length > 0 ?
+          (
+            riders.map((rider) => {
+              return (
+                <RiderCard rider={rider} setOpenModal={openModal} key={rider.first_name + " " + rider.last_name}/>
+              )
+            })
+          ) :
+          (
+            <ReactLoading type={"spinningBubbles"} color={"#3385d6"} height={'20%'} width={'20%'} />
+          )
+        }
       </div>
+      <MapModal rider={currentRider}/>
     </div>
   );
 };

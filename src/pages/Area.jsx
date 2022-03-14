@@ -15,9 +15,6 @@ const Area = () => {
   return (
     <div className="area">
       <Banner img={area_banner} title="About the Area" />
-      <div className="area-content">
-        content
-      </div>
     </div>
   );
 };
