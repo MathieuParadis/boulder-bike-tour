@@ -1,6 +1,7 @@
 .banner {
   position: relative;
   margin: 0 -70px 0 -70px;
+  height: 300px;
 
   @include mobile_and_tablet {
     margin: 0 -45px 0 -45px;
@@ -27,15 +28,13 @@
   }
 
   .banner-title {
-    padding: 0 70px 0 70px;
-    position: absolute;
-    top: 150px;
+    padding: 80px 70px 0 70px;
     z-index: 20;
     font-size: 3rem;
     color: var(--basic-color-white);
 
     @include mobile_and_tablet {
-      padding: 0 45px 0 45px;
+      padding: 80px 45px 0 45px;
     }
 
     &::before {
@@ -44,7 +43,11 @@
       height: 5px;
       background: var(--sec-color);
       position: absolute;
-      bottom: -20px;
+      bottom: 60px;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
