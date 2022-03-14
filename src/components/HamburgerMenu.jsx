@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const HamburgerMenu = () => {
+
+
   const handleMenu = () => {
     document.querySelector(".span1").classList.toggle("clicked");
     document.querySelector(".span2").classList.toggle("clicked");
@@ -29,7 +31,7 @@ const HamburgerMenu = () => {
         <NavLink className="menu-link my-2" exact="true" to="/area" onClick={handleMenu}>About the area</NavLink>
         <NavLink className="menu-link my-2" exact="true" to="/photos" onClick={handleMenu}>Gallery</NavLink> 
         <NavLink className="menu-link my-2" exact="true" to="/riders" onClick={handleMenu}>Riders</NavLink>
-        <NavLink className="menu-link my-2" exact="true" to="/locations" onClick={handleMenu}>Locate Riders</NavLink>
+        <NavLink className="menu-link my-2" exact="true" to="/riders-locations" onClick={handleMenu}>Locate Riders</NavLink>
 
         <div className="my-2 py-2">
           <a href="https://twitter.com/" target="_blank">

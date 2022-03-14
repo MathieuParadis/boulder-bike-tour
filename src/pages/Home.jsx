@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero-section">
-        <div className="bg-picture"></div>
+        {/* <div className="bg-picture"></div> */}
         <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
           <div className="col-12 col-md-6">
             <h1>Competition is fierce</h1>

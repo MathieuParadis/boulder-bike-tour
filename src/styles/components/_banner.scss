@@ -2,6 +2,10 @@
   position: relative;
   margin: 0 -70px 0 -70px;
 
+  @include mobile_and_tablet {
+    margin: 0 -45px 0 -45px;
+  }
+
   .banner-img {
     position: absolute;
     top: 0;
@@ -29,6 +33,10 @@
     z-index: 20;
     font-size: 3rem;
     color: var(--basic-color-white);
+
+    @include mobile_and_tablet {
+      padding: 0 45px 0 45px;
+    }
 
     &::before {
       content: "";
