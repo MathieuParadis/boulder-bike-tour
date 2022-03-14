@@ -42,9 +42,14 @@
     font-size: 5rem;
     color: var(--basic-color-white);
 
-    @include mobile_and_tablet {
+    @include tablet {
       padding: 70px 75px 0 75px;
       font-size: 3rem;
+    }
+
+    @include mobile {
+      padding: 70px 75px 0 75px;
+      font-size: 2.5rem;
     }
 
     &::before {

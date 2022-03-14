@@ -13,6 +13,7 @@
       color: var(--prim-color);
 
       @include mobile_and_tablet {
+        font-size: 2rem;
         text-align: center;
       }
     }

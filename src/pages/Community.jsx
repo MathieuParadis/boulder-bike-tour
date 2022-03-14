@@ -5,7 +5,8 @@ import React, {useEffect} from 'react';
 import Banner from '../components/Banner';
 
 // ASSETS IMPORTS
-import community_banner from '../assets/images/community_banner2.jpg';
+import community_banner from '../assets/images/community_banner.jpg';
+
 
 const Community = () => {
   useEffect(() => {
