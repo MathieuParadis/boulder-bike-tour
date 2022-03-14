@@ -76,6 +76,11 @@
         width: 300px;
         height: 300px;
 
+        @include mobile_and_tablet {
+          width: 250px;
+          height: 250px;
+        }
+
         .img-box {
           position: absolute;
           top: 0;

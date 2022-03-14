@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero-section">
-        {/* <div className="bg-picture"></div> */}
+        <div className="bg-picture"></div>
         <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
           <div className="col-12 col-md-6">
             <h1>Competition is fierce</h1>
@@ -31,7 +31,7 @@ const Home = () => {
           <div className="boxes d-flex flex-wrap flex-row justify-content-center align-items-center">
             <NavLink exact="true" to="/race" className="box d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-4 p-3">
                 <div className="box-content d-flex flex-column justify-content-center align-items-center">
-                  <img src={race} alt="race illustration" className="img-box" />
+                  <img src={race} alt="area illustration" className="img-box" />
                   <h3 className="text-center">Race<br></br>Information</h3>
                 </div>
             </NavLink>
