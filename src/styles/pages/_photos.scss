@@ -5,4 +5,16 @@
     min-height: 100vh;
     border: 2px solid var(--sec-color);
   }
+
+  .button-gallery {
+    cursor: pointer;
+    background-color: var(--prim-color);
+    color: var(--basic-color-white);
+    width: 100px;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: var(--darker-prim-color);
+    }
+  }
 }

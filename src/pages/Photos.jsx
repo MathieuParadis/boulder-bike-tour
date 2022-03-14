@@ -6,7 +6,7 @@ import ReactLoading from 'react-loading';
 import PhotoContainer from '../components/PhotoContainer';
 
 const Photos = () => {
-  let page_number = 0;
+  let page_number = 1;
 
   const [photos, setPhotos] = React.useState(null);
   const [currentPage, setCurrentPage] = React.useState(0);
@@ -17,7 +17,7 @@ const Photos = () => {
   const getPhotosData = (page) => {
     const base_url = 'https://www.flickr.com/services/rest/';
     const method = 'flickr.photos.search';
-    const api_key = "2d71c75e37a109ab80db6aedaa6b2044";
+    const api_key = "f7282b46660922789b184d3820e81803";
     const tags_array = ['mountain-bike', 'bike', 'race', 'colorado', 'mountain'];
     const tags = `${tags_array[0]}%2C+${tags_array[1]}%2C+${tags_array[2]}%2C+${tags_array[3]}%2C+${tags_array[4]}%2C`;
     const per_page = 40;
@@ -48,13 +48,12 @@ const Photos = () => {
     setPage(page - 1);
     window.scrollTo(0, 0)
   }
-
+  
   useEffect(() => { 
     getPhotosData(page);
   }, [page]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
   }, []);
   
   return (
@@ -62,7 +61,7 @@ const Photos = () => {
       { photos && photos.length > 0 ?
         (
           <>
-            <div className="photos-container d-flex flex-wrap justify-content-between align-items-center">
+            <div className="photos-container d-flex flex-wrap justify-content-between align-items-center mb-3">
               {
                 photos.map((photo) => {
                   return (
@@ -71,19 +70,24 @@ const Photos = () => {
                 })
               }
             </div>
-            {
-              currentPage !== 1 &&
-              <>
-                <button onClick={() => displayPreviousPage()}>Previous page</button>      
-              </>
-            }
-            {
-              currentPage !== totalPages &&
-              <>
-                <button onClick={() => displayNextPage()}>Next page</button>      
-              </>
-            }
-            Page: {currentPage} / {totalPages}
+            <div className="d-flex flex-wrap justify-content-between align-items-center">
+              <div className="d-flex">
+                {
+                  currentPage !== 1 &&
+                  <>
+                    <div onClick={() => displayPreviousPage()} className="button-gallery d-flex justify-content-center align-items-center me-2 p-2">Prev</div>      
+                  </>
+                }
+                {
+                  currentPage !== totalPages &&
+                  <>
+                    <div onClick={() => displayNextPage()} className="button-gallery d-flex justify-content-center align-items-center p-2">Next</div>      
+                  </>
+                }
+              </div>
+              <p className="h5"><strong>Page: </strong>{currentPage}</p>
+            </div>
+
           </>
         ) : 
         (
