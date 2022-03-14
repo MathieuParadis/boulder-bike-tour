@@ -5,6 +5,7 @@
 
   @include mobile_and_tablet {
     margin: 0 -45px 0 -45px;
+    height: 180px;
   }
 
   .banner-img {
@@ -14,6 +15,10 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
+
+    @include mobile_and_tablet {
+      height: 180px;
+    }
   }
 
   .banner-overlay {
@@ -25,6 +30,10 @@
     background-color: var(--basic-color-dark);
     opacity: 0.6;
     z-index: 19;
+
+    @include mobile_and_tablet {
+      height: 180px;
+    }
   }
 
   .banner-title {
@@ -46,7 +55,7 @@
       position: absolute;
       bottom: 50px;
 
-      @include mobile {
+      @include mobile_and_tablet {
         display: none;
       }
     }
