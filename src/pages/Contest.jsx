@@ -5,7 +5,7 @@ import React, {useEffect} from 'react';
 import Banner from '../components/Banner';
 
 // ASSETS IMPORTS
-import contest_banner from '../assets/images/contact_banner.jpeg';
+import contest_banner from '../assets/images/contest_banner.jpeg';
 
 const Contest = () => {
   useEffect(() => {

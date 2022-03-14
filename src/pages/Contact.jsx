@@ -5,7 +5,7 @@ import React, {useEffect} from 'react';
 import Banner from '../components/Banner';
 
 // ASSETS IMPORTS
-import contact_banner from '../assets/images/contact_banner.jpeg';
+import contact_banner from '../assets/images/contact_banner.jpg';
 
 const Contact = () => {
   useEffect(() => {
