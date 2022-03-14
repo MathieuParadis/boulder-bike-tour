@@ -28,13 +28,14 @@
   }
 
   .banner-title {
-    padding: 80px 70px 0 70px;
+    padding: 70px 170px 0 170px;
     z-index: 20;
-    font-size: 3rem;
+    font-size: 5rem;
     color: var(--basic-color-white);
 
     @include mobile_and_tablet {
-      padding: 80px 45px 0 45px;
+      padding: 70px 75px 0 75px;
+      font-size: 3rem;
     }
 
     &::before {
@@ -43,7 +44,7 @@
       height: 5px;
       background: var(--sec-color);
       position: absolute;
-      bottom: 60px;
+      bottom: 50px;
 
       @include mobile {
         display: none;
