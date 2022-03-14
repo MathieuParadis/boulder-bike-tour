@@ -85,9 +85,8 @@ const Photos = () => {
                   </>
                 }
               </div>
-              <p className="h5"><strong>Page: </strong>{currentPage}</p>
+              <p className="h5 m-0"><strong>Page: </strong>{currentPage}</p>
             </div>
-
           </>
         ) : 
         (

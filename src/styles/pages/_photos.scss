@@ -13,6 +13,10 @@
     width: 100px;
     border-radius: 10px;
 
+    @include mobile {
+      width: 60px;
+    }
+
     &:hover {
       background-color: var(--darker-prim-color);
     }
