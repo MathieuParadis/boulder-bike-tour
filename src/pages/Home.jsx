@@ -17,8 +17,10 @@ const Home = () => {
       <div className="hero-section">
         <div className="bg-picture"></div>
         <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
-          <div className="col-12 col-md-6">
-            <h1>Competition is fierce</h1>
+          <div className="col-12 col-md-6 flex-column justify-content-center align-items-center mb-5">
+            <h1 className="hero-section-title">Once in a lifetime experience</h1>
+            <p className="hero-section-hashtag mb-5 pb-4">#BBTour</p>
+            <NavLink exact="true" to="/race" className="contest-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
           </div>
           <div className="countdown col-12 col-md-6">
             <p>countdown here</p>
