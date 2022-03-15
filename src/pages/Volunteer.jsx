@@ -16,8 +16,8 @@ const Volunteer = () => {
     <div className="volunteer">
       <Banner img={volunteer_banner} title="Become a Volunteer" />
       <div className="volunteer-content">
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <h3 className="mb-4">Volunteering, what is it?</h3>
+        <div className="d-flex flex-column justify-content-center">
+          <h3 className="mb-4 text-center">Volunteering, what is it?</h3>
           <p>Becoming a volunteer for the Boulder Bike Tour is first and foremost an opportunity to get involved in an association whose goal is to encounter nature and to surpass oneself.</p>
           <p>It is also an opportunity to discover the mountain landscapes, to meet other people and to support the men and women who will work all day to achieve their sporting challenge.</p>
           <p>
