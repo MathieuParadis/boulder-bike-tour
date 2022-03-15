@@ -58,7 +58,7 @@
         padding-top: 0;
       }
 
-      .contest-button {
+      .hero-button {
         background-color: var(--prim-color);
         border-radius: 10px;
         width: 200px;
@@ -166,7 +166,7 @@
       }
     }
 
-    .hero-content {
+    .contest-content {
       height: 100vh;
       position: absolute;
       padding: 0 70px 0 70px;
@@ -178,29 +178,24 @@
         text-align: center;
       }
 
-      .hero-section-title, .hero-section-hashtag {
-        font-size: 4.5em;
+      .contest-section-title {
+        font-size: 3.5em;
         color: white;
         font-weight: bold;
 
         @include tablet {
-          font-size: 4em;
+          font-size: 3em;
         }
 
         @include mobile {
-          font-size: 3em;
+          font-size: 2em;
         }
-      }
-
-      .hero-section-hashtag {
-        color: var(--sec-color);
-        padding-top: 0;
       }
 
       .contest-button {
         background-color: var(--prim-color);
         border-radius: 10px;
-        width: 200px;
+        width: 250px;
     
         &:hover {
           background-color: var(--darker-prim-color);    

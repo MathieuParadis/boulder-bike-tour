@@ -20,7 +20,7 @@ const Home = () => {
           <div className="col-12 col-md-6 flex-column justify-content-center align-items-center mb-5">
             <h1 className="hero-section-title">Once in a lifetime experience</h1>
             <p className="hero-section-hashtag mb-5 pb-4">#BBTour</p>
-            <NavLink exact="true" to="/race" className="contest-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
+            <NavLink exact="true" to="/race" className="hero-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
           </div>
           <div className="countdown col-12 col-md-6">
             <p>countdown here</p>
@@ -54,20 +54,11 @@ const Home = () => {
       </div>
 
       <div className="contest-section">
-
         <div className="bg-picture"></div>
-        <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
-          <div className="col-12 col-md-6 flex-column justify-content-center align-items-center mb-5">
-            <h1 className="hero-section-title">Once in a lifetime experience</h1>
-            <p className="hero-section-hashtag mb-5 pb-4">#BBTour</p>
-            <NavLink exact="true" to="/race" className="contest-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
-          </div>
-          <div className="countdown col-12 col-md-6">
-            <p>countdown here</p>
-          </div>
+        <div className="contest-content d-flex flex-column justify-content-center align-items-center align-items-md-start">
+          <h1 className="contest-section-title">Come up with the catchiest slogan you can think about and try to win your ticket to participate to the next edition</h1>
+          <NavLink exact="true" to="/contest" className="contest-button h2 mt-5 px-4 py-3 text-white text-center">Join contest</NavLink>
         </div>
-
-
       </div>
     </div>
   );
