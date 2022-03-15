@@ -20,6 +20,7 @@ const Locations = () => {
   const [zoom, setZoom] = useState(12);
   const [currentRider, setCurrentRider] = useState("");
   const [coordinatesBlueMarker, setCoordinatesBlueMarker] = useState([0, 0]);
+  const [widthBlueMarker, setWidthBlueMarker] = useState(0);
 
   const displayBubbleRiderInfo = (rider) => {
     bubbleRider.style.visibility = 'visible';
@@ -27,6 +28,7 @@ const Locations = () => {
     setCenter([rider.position.lat, rider.position.lgn]);
     setZoom(13);
     setCoordinatesBlueMarker([rider.position.lat, rider.position.lgn]);
+    setWidthBlueMarker(100);
   }
 
   const closeBubbleRiderInfo = () => {
@@ -34,6 +36,7 @@ const Locations = () => {
     setZoom(12);
     setCenter([40.014984, -105.270546]);
     setCoordinatesBlueMarker([0,0]);
+    setWidthBlueMarker(0)
   }
 
   window.onclick = (event) => {
@@ -60,7 +63,7 @@ const Locations = () => {
             )
           })
         }
-        <Marker width={100} anchor={coordinatesBlueMarker} color={'#3385d6'} />
+        <Marker width={widthBlueMarker} anchor={coordinatesBlueMarker} color={'#3385d6'} />
         <Overlay offset={[0, 0]}>
           <div className="bubble-rider">
             <div className="pointer"></div>
