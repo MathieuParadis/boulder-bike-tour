@@ -15,6 +15,8 @@ const Contest = () => {
   return (
     <div className="contest">
       <Banner img={contest_banner} title="Slogan contest" />
+      <p>Come up with the catchiest slogan you can think about and try to win your ticket to participate to the next edition</p>
+      We will select the best slogan and use it ...
     </div>
   );
 };

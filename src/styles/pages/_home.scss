@@ -158,7 +158,7 @@
       background-image: url("../../assets/images/homepage_contest_bg.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
-      filter: brightness(70%);
+      filter: brightness(60%);
 
       @include mobile {
         background-image: url("../../assets/images/homepage_contest_bg_mb.jpeg");
@@ -179,7 +179,7 @@
       }
 
       .contest-section-title {
-        font-size: 3.5em;
+        font-size: 4em;
         color: white;
         font-weight: bold;
 
@@ -188,7 +188,21 @@
         }
 
         @include mobile {
+          font-size: 2.5em;
+        }
+      }
+
+      .contest-section-description {
+        font-size: 2em;
+        color: white;
+        font-weight: bold;
+
+        @include tablet {
           font-size: 2em;
+        }
+
+        @include mobile {
+          font-size: 1.5em;
         }
       }
 

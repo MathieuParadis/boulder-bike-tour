@@ -55,8 +55,9 @@ const Home = () => {
 
       <div className="contest-section">
         <div className="bg-picture"></div>
-        <div className="contest-content d-flex flex-column justify-content-center align-items-center align-items-md-start">
-          <h1 className="contest-section-title">Come up with the catchiest slogan you can think about and try to win your ticket to participate to the next edition</h1>
+        <div className="contest-content d-flex flex-column justify-content-center align-items-center">
+          <h3 className="contest-section-title text-center pb-5">Participate to our slogan contest</h3>
+          <p className="contest-section-description text-center">And try to win your ticket for the next edition</p>
           <NavLink exact="true" to="/contest" className="contest-button h2 mt-5 px-4 py-3 text-white text-center">Join contest</NavLink>
         </div>
       </div>
