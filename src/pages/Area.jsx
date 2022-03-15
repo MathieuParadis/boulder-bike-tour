@@ -16,13 +16,20 @@ const Area = () => {
     <div className="area">
       <Banner img={area_banner} title="About the Area" />
       <div className="area-content">
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <h3 className="mb-4">Sport, a vector of integration</h3>
-          <p>Sport has a unique power to bring people together, attract, mobilize, inspire and generate social inclusion.</p>
-          <p>All year long we organize events to promote cycling and sport in general, to less 
-          </p>
-          <p>Whether you like logistics (setting up refreshment stands, managing bikes, organizing the site, preparing meals, etc) or you prefer to be on the ground (checking markers, taking note of times, securing dangerous points etc), there is bound to be something that suits you as a volunteer. 
-             And of course, all this happens in a joyful and good mood, always at least in pairs. So don't hesitate any longer and join the big family of the Boulder Bike Tour volunteers!</p>
+        <div>
+          <div className="d-flex flex-column justify-content-center align-items-center mb-4">
+            <h3 className="mb-4">Boulder, Colorado</h3>
+            <p>
+              The City of Boulder is a home rule municipality that is the county seat and most populous municipality of Boulder County, Colorado.
+              Boulder is located at the base of the foothills of the Rocky Mountains, at an elevation of 5,430 feet (1,655 m) above sea level. Boulder is 25 miles (40 km) northwest of the Colorado state capital of Denver. It is home of the main campus of the University of Colorado, the state's largest university.
+            </p>
+          </div>
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <h3 className="mb-4">Biking in Boulder</h3>
+            <p>
+              Whether you're a road biker or mountain biker, Boulder is the perfect place for a two-wheeled adventure. Boulder boasts over 300+ miles of bike lanes and routes, a web of revered mountain bike trails and ample outlets for bike rentals. 
+            </p>
+          </div>
         </div>
       </div>
     </div>
