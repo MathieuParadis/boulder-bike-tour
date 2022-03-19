@@ -8,10 +8,10 @@ import PhotoContainer from '../components/PhotoContainer';
 const Photos = () => {
   let page_number = 1;
 
-  const [photos, setPhotos] = React.useState(null);
-  const [currentPage, setCurrentPage] = React.useState(0);
-  const [totalPages, setTotalPages] = React.useState(0);
-  const [page, setPage] = React.useState(page_number);
+  const [photos, setPhotos] = useState(null);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const [page, setPage] = useState(page_number);
 
 
   const getPhotosData = (page) => {

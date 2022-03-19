@@ -2,9 +2,6 @@
 import React, {useState, useEffect} from 'react';
 import ReactLoading from 'react-loading';
 
-// DATA IMPORTS
-import riders from '../data/Riders';
-
 // COMPONENT IMPORTS
 import Banner from '../components/Banner';
 import MapModal from '../components/MapModal';
@@ -14,13 +11,34 @@ import RiderCard from '../components/RiderCard';
 import riders_banner from '../assets/images/riders_banner.jpg';
 
 const Riders = () => {
+  const [riders, setRiders] = useState(null);
   const [currentRider, setCurrentRider] = useState(null);
+
+  const getRidersData = () => {
+    const url = '/riders';
+
+    fetch(url, {
+      method: "GET",
+    })
+    .then(res => res.json())
+    .catch(error => {
+        console.error('Error:', error);
+    })
+    .then(response => {
+        console.log(response);
+        setRiders(response);
+    });
+  }
 
   const openModal = (rider) => {
     setCurrentRider(rider);
     let modal = document.querySelector(".map-modal");
     modal.style.visibility = 'visible';
   }
+
+  useEffect(() => { 
+    getRidersData();
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
