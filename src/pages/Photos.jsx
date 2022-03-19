@@ -13,11 +13,10 @@ const Photos = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [page, setPage] = useState(page_number);
 
-
   const getPhotosData = (page) => {
     const base_url = 'https://www.flickr.com/services/rest/';
     const method = 'flickr.photos.search';
-    const api_key = "f7282b46660922789b184d3820e81803";
+    const api_key = "6fbf4707e96bc5a499f2c5da5085f08d";
     const tags_array = ['mountain-bike', 'bike', 'race', 'colorado', 'mountain'];
     const tags = `${tags_array[0]}%2C+${tags_array[1]}%2C+${tags_array[2]}%2C+${tags_array[3]}%2C+${tags_array[4]}%2C`;
     const per_page = 40;
