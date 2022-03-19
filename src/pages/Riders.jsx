@@ -57,7 +57,9 @@ const Riders = () => {
             })
           ) :
           (
-            <ReactLoading type={"spinningBubbles"} color={"#3385d6"} height={'20%'} width={'20%'} />
+            <div className="d-flex justify-content-center align-items-center w-100 p-3">
+              <ReactLoading type={"spinningBubbles"} color={"#3385d6"} height={'20%'} width={'20%'} />
+            </div>
           )
         }
       </div>
