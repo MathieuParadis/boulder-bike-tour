@@ -24,6 +24,7 @@ const Home = () => {
           </div>
           <div className="countdown col-12 col-md-6">
             <p>countdown here</p>
+            <p>countdown here</p>
           </div>
         </div>
       </div>
