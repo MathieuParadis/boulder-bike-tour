@@ -20,9 +20,9 @@ const Home = () => {
       <div className="hero-section">
         <div className="bg-picture"></div>
         <div className="hero-content d-flex flex-column flex-md-row justify-content-center align-items-center">
-          <div className="col-12 col-md-6 flex-column justify-content-center align-items-center mb-5">
+          <div className="col-12 col-md-6 flex-column justify-content-center align-items-center mb-5 pb-5 pb-md-0">
             <h1 className="hero-section-title">Once in a lifetime experience</h1>
-            <p className="hero-section-hashtag mb-5 pb-4">#BBTour</p>
+            <p className="hero-section-hashtag mb-2 mb-md-5 pb-4">#BBTour</p>
             <NavLink exact="true" to="/race" className="hero-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
           </div>
           <div className="countdown-section d-flex flex-column justify-content-md-end align-items-md-end col-12 col-md-6">
