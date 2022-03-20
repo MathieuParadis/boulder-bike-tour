@@ -71,6 +71,15 @@
           background-color: var(--prim-color);    
         }
       }
+
+      .countdown-section {
+        height: 100%;
+        padding-bottom: 12em;
+
+        .date {
+          font-size:2.5em;
+        }
+      }
     }
   }
 

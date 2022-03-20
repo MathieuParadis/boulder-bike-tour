@@ -2,6 +2,9 @@
 import React, {useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 
+// COMPONENTS IMPORTS
+import Countdown from '../components/Countdown';
+
 // ASSETS IMPORTS
 import race from '../assets/images/race_illustration.jpeg';
 import area from '../assets/images/area_illustration.jpg';
@@ -22,9 +25,9 @@ const Home = () => {
             <p className="hero-section-hashtag mb-5 pb-4">#BBTour</p>
             <NavLink exact="true" to="/race" className="hero-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
           </div>
-          <div className="countdown col-12 col-md-6">
-            <p>countdown here</p>
-            <p>countdown here</p>
+          <div className="countdown-section d-flex flex-column justify-content-md-end align-items-md-end col-12 col-md-6">
+            <p className=" date text-white">April 01, 2020</p>
+            <Countdown />
           </div>
         </div>
       </div>
