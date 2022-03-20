@@ -33,7 +33,9 @@ const Countdown = () => {
 
   return (
     <div className="countdown-section d-flex flex-column justify-content-md-end align-items-md-end col-12 col-md-6">
-      <p className=" date text-white">April 01, 2022</p>
+      <p className=" date d-block d-md-none text-white text-center"><strong>2022, April 01</strong><br></br>9.00 am</p>
+      <p className=" date text-white d-none d-md-block text-md-end"><strong>2022, April 01</strong><br></br>9.00 am</p>
+
       <div className="countdown d-flex flex-wrap justify-content-center justify-content-md-end align-items-center">
         <div className="d-flex flex-wrap justify-content-between align-items-center">
           <div className="time-square d-flex flex-column justify-content-center align-items-center m-2">
