@@ -1,8 +1,31 @@
-.countdown {
-  .time-square {
-    width: 100px;
-    height: 100px;
-    color: var(--sec-color);
-    border: 1px solid var(--sec-color);
+.countdown-section {
+  height: 100%;
+  padding-bottom: 9em;
+
+  @include tablet {
+    padding-bottom: 12em;
+  }
+
+  @include mobile {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  .date {
+    font-size: 2.5em;
+
+    @include mobile {
+      font-size: 2em;
+    }
+  }
+
+  .countdown {
+    .time-square {
+      width: 100px;
+      height: 100px;
+      color: var(--sec-color);
+      border: 2px solid var(--sec-color);
+      font-weight: bold;
+    }
   }
 }

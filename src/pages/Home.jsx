@@ -25,10 +25,7 @@ const Home = () => {
             <p className="hero-section-hashtag mb-2 mb-md-5 pb-4">#BBTour</p>
             <NavLink exact="true" to="/race" className="hero-button h2 mt-5 px-4 py-3 text-white text-center">Learn more</NavLink>
           </div>
-          <div className="countdown-section d-flex flex-column justify-content-md-end align-items-md-end col-12 col-md-6">
-            <p className=" date text-white">April 01, 2020</p>
-            <Countdown />
-          </div>
+          <Countdown />
         </div>
       </div>
 
