@@ -45,11 +45,11 @@
         font-weight: bold;
 
         @include tablet {
-          font-size: 4em;
+          font-size: 3em;
         }
 
         @include mobile {
-          font-size: 3em;
+          font-size: 2em;
         }
       }
 
@@ -74,10 +74,23 @@
 
       .countdown-section {
         height: 100%;
-        padding-bottom: 12em;
+        padding-bottom: 8.5em;
+
+        @include tablet {
+          padding-bottom: 12em;
+        }
+
+        @include mobile {
+          height: auto;
+          padding-bottom: 0;
+        }
 
         .date {
-          font-size:2.5em;
+          font-size: 2.5em;
+
+          @include mobile {
+            font-size: 1.5em;
+          }
         }
       }
     }
