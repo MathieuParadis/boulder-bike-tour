@@ -20,7 +20,7 @@ const Locations = () => {
   const [widthBlueMarker, setWidthBlueMarker] = useState(0);
   
   const getRidersData = () => {
-    const url = '/riders';
+    const url = 'https://boulder-bike-tour-backend.herokuapp.com/riders';
 
     fetch(url, {
       method: "GET",
