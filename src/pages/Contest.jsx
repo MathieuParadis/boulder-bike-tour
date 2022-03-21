@@ -25,7 +25,35 @@ const Contest = () => {
             and the winner will be awarded the right to enroll in the coming edition, free of charge.
           </p>
         </div>
-        <div className="contest-form">
+        <div className="contest-form d-flex flex-column justify-content-center mb-4">
+          <h3 className="mb-4 text-center">Propose your idea</h3>
+          <form>
+            <div className="mb-3">
+              <label for="first_name" className="form-label">First name</label>
+              <input type="text" className="form-control" id="first_name" aria-describedby="first_name input field" placeholder="" required />
+            </div>
+            <div className="mb-3">
+              <label for="last_name" className="form-label">Last name</label>
+              <input type="text" className="form-control" id="last_name" aria-describedby="last_name input field" placeholder="" required />
+            </div>
+            <div className="mb-3">
+              <label for="email" className="form-label">Email address</label>
+              <input type="email" className="form-control" id="email" aria-describedby="email input field" placeholder="" required />
+            </div>
+            <div className="mb-3">
+              <label for="slogan" className="form-label">Slogan</label>
+              <small for="slogan" className="form-label"> (50 characters max)</small>
+              <textarea type="text" className="form-control" id="slogan" aria-describedby="slogan" rows="5" placeholder="Your slogan here ..." maxlength="50" required />
+            </div>
+            <div className="mt-4">
+              <button type="submit" className="btn btn-primary text-white mb-3" id="register_btn">Submit proposal</button>
+            </div>
+          </form>
+
+
+
+
+
 
         </div>
       </div>
