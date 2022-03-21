@@ -15,7 +15,6 @@ const Contest = () => {
   return (
     <div className="contest">
       <Banner img={contest_banner} title="Slogan contest" />
-
       <div className="contest-content">
         <div className="d-flex flex-column justify-content-center mb-4">
           <h3 className="mb-4 text-center">Rules</h3>
@@ -49,12 +48,6 @@ const Contest = () => {
               <button type="submit" className="btn btn-primary text-white mb-3" id="register_btn">Submit proposal</button>
             </div>
           </form>
-
-
-
-
-
-
         </div>
       </div>
     </div>
