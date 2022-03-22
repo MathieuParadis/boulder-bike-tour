@@ -43,7 +43,6 @@ const Contest = () => {
     .catch(error =>{
         console.log(error);
         displayFlashDanger();
-        emptyFormFields();
     })
   }
 
