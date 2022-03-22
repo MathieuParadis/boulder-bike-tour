@@ -43,7 +43,7 @@ const Contest = () => {
           <h3 className="mb-4 text-center">Rules</h3>
           <p>
             Come up with the catchiest slogan you can think of for the Boulder Bike Tour. There is only one constraint, the slogan must be 50 characters maximum.
-            Our team will review all the proposals and select the best one. The shortlisted slogan will be used as our official tagline.
+            Our team will review all the proposals and select the best one. The shortlisted slogan will be used as our official tagline,
             and the winner will be awarded the right to enroll in the coming edition, free of charge.
           </p>
         </div>
