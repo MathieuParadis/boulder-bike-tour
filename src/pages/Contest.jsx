@@ -23,7 +23,7 @@ const Contest = () => {
     slogan: slogan
     };
 
-    const url = 'http://localhost:3001/slogan_contests';
+    const url = 'https://boulder-bike-tour-backend.herokuapp.com/slogan_contests';
 
     fetch(url, {
       method: "POST",
