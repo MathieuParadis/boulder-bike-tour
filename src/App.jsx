@@ -15,6 +15,7 @@ import Riders from './pages/Riders';
 import Volunteer from './pages/Volunteer';
 
 // COMPONENT IMPORTS
+import Flash from './components/Flash';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 
@@ -28,6 +29,7 @@ const App = () => {
     <div className="app">
       <Router>
         <Navigation />
+        <Flash />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/area" exact="true" element={<Area />} />

@@ -33,11 +33,43 @@ const Contest = () => {
       },
       body: JSON.stringify(data),
     })
-    .then(response => response.json())
+    .then(response => {
+      response.json()
+      if (response.ok) {
+        displayFlashSuccess();
+        emptyFormFields();
+      }
+    })
     .catch(error =>{
-        console.log(error)
+        console.log(error);
+        displayFlashDanger();
+        emptyFormFields();
     })
   }
+
+  const displayFlashSuccess = () => {
+    const flash = document.querySelector(".flash");
+    const flashContent = document.querySelector(".flash-content");
+    window.scrollTo(0, 0);
+    flash.classList.add("flash-success");
+    flashContent.innerText = "Your proposal was submitted successfully!";
+  }
+
+  const displayFlashDanger = () => {
+    const flash = document.querySelector(".flash");
+    const flashContent = document.querySelector(".flash-content");
+    window.scrollTo(0, 0);
+    flash.classList.add("flash-danger");
+    flashContent.innerText = "An error has occurred, please try again!";
+  }
+
+  const emptyFormFields = () => {
+    document.querySelector('#first_name').value = "";
+    document.querySelector('#last_name').value = "";
+    document.querySelector('#email').value = "";
+    document.querySelector('#slogan').value = "";
+  }
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
