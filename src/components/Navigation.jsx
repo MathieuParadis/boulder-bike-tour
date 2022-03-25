@@ -58,7 +58,7 @@ const Navigation = () => {
             <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
           </div>
           <div className="d-flex justify-content-center align-items-center">
-            <p className="date h5 m-0">April 01, 2022</p>
+            <p className="date h5 m-0">April 01, 2023</p>
           </div>
         </div>
       </div>
