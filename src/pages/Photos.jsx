@@ -51,10 +51,7 @@ const Photos = () => {
   useEffect(() => { 
     getPhotosData(page);
   }, [page]);
-
-  useEffect(() => {
-  }, []);
-  
+ 
   return (
     <div className="photos py-3">
       { photos && photos.length > 0 ?
