@@ -3,16 +3,18 @@ import React, {useState, useEffect} from 'react';
 
 import moment from 'moment'
 
-const Countdown = ({ year = 2023 }) => {
+const Countdown = () => {
+  const year = (new Date(`2023/04/01 09:00:00`) > new Date() ? new Date().getFullYear() : new Date().getFullYear() + 1);
+  
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const eventDate = `01/04/${year} 09:00:00`;
+  const eventDate = `${year}/04/01 09:00:00`;
 
   const updateCountdown = () => {
-    let secBeforeEvent = moment(eventDate, "DD/MM/YYYY HH:mm:ss").diff(moment().format())/1000;
+    let secBeforeEvent = moment(eventDate, "YYYY/MM/DD HH:mm:ss").diff(moment().format())/1000;
     let secCountdown = (secBeforeEvent) % 60;
     let minCountdown = (Math.floor(secBeforeEvent / 60)) % 60;
     let hoursCountdown = (Math.floor(secBeforeEvent / 3600)) % 24;

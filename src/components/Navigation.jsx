@@ -11,7 +11,9 @@ import HamburgerMenu from './HamburgerMenu';
 // ASSETS IMPORTS
 import logo from '../assets/logos/logo_name.svg';
 
-const Navigation = ({ year = 2023 }) => {
+const Navigation = () => {
+  const year = (new Date(`2023/04/01 09:00:00`) > new Date() ? new Date().getFullYear() : new Date().getFullYear() + 1);
+
   const location = useLocation();
   const navigate = useNavigate()
 
