@@ -3,13 +3,13 @@ import React, {useState, useEffect} from 'react';
 
 import moment from 'moment'
 
-const Countdown = () => {
+const Countdown = ({ year = 2023 }) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const eventDate = "01/04/2023 09:00:00";
+  const eventDate = `01/04/${year} 09:00:00`;
 
   const updateCountdown = () => {
     let secBeforeEvent = moment(eventDate, "DD/MM/YYYY HH:mm:ss").diff(moment().format())/1000;
@@ -29,12 +29,12 @@ const Countdown = () => {
       updateCountdown();
     }, 1000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <div className="countdown-section d-flex flex-column justify-content-md-end align-items-md-end col-12 col-md-6">
-      <p className=" date d-block d-md-none text-white text-center"><strong>2023, April 01</strong><br></br>9.00 am</p>
-      <p className=" date text-white d-none d-md-block text-md-end"><strong>2023, April 01</strong><br></br>9.00 am</p>
+      <p className=" date d-block d-md-none text-white text-center"><strong>{year}, April 01</strong><br></br>9.00 am</p>
+      <p className=" date text-white d-none d-md-block text-md-end"><strong>{year}, April 01</strong><br></br>9.00 am</p>
 
       <div className="countdown d-flex flex-wrap justify-content-center justify-content-md-end align-items-center">
         <div className="d-flex flex-wrap justify-content-between align-items-center">

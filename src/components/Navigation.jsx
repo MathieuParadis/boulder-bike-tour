@@ -11,7 +11,7 @@ import HamburgerMenu from './HamburgerMenu';
 // ASSETS IMPORTS
 import logo from '../assets/logos/logo_name.svg';
 
-const Navigation = () => {
+const Navigation = ({ year = 2023 }) => {
   const location = useLocation();
   const navigate = useNavigate()
 
@@ -35,13 +35,13 @@ const Navigation = () => {
           </div>
           <div className="d-none d-lg-flex align-items-center">
             <div>
-              <a href="https://twitter.com/" target="_blank">
+              <a href="https://twitter.com/" target="_blank" rel='noreferrer'>
                 <FontAwesomeIcon icon="fa-brands fa-twitter" size="2x" className="social-networks me-1"/>
               </a>
-              <a href="https://facebook.com/" target="_blank">
+              <a href="https://facebook.com/" target="_blank" rel='noreferrer'>
                 <FontAwesomeIcon icon="fa-brands fa-facebook-f" size="2x" className="social-networks mx-3"/>
               </a>
-              <a href="https://instagram.com/" target="_blank">
+              <a href="https://instagram.com/" target="_blank" rel='noreferrer'>
                 <FontAwesomeIcon icon="fa-brands fa-instagram" size="2x" className="social-networks ms-1"/>
               </a>
             </div>
@@ -58,7 +58,7 @@ const Navigation = () => {
             <NavLink exact="true" to="/riders-locations" className="navlink h5 ms-2 ms-xl-4 mb-0">Locate Riders</NavLink>
           </div>
           <div className="d-flex justify-content-center align-items-center">
-            <p className="date h5 m-0">April 01, 2023</p>
+            <p className="date h5 m-0">April 01, {year}</p>
           </div>
         </div>
       </div>
