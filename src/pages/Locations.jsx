@@ -20,7 +20,8 @@ const Locations = () => {
   const [widthBlueMarker, setWidthBlueMarker] = useState(0);
   
   const getRidersData = () => {
-    const url = 'https://boulder-bike-tour-backend.herokuapp.com/riders';
+    // const url = 'https://boulder-bike-tour-backend.herokuapp.com/riders';
+    const url = 'http://localhost:3000/riders';
 
     fetch(url, {
       method: "GET",
@@ -94,7 +95,7 @@ const Locations = () => {
                   {
                     currentRider && 
                     <>
-                      <img src={rider_logo} className="rider-logo" />
+                      <img src={rider_logo} className="rider-logo" alt="logo" />
                       <h3 className="m-0">{currentRider.first_name}</h3>
                       <h3 className="m-0">{currentRider.last_name}</h3>
                       <p className="m-0"><strong>Lat: </strong>{currentRider.position.lat}</p>

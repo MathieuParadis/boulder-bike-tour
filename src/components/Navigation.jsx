@@ -29,7 +29,7 @@ const Navigation = () => {
       <div className="navigation">
         <div className="navbar-top d-flex justify-content-between align-items-center">
           <div className="d-flex align-items-center">
-            <NavLink exact="true" to="/" className="navlink h4 me-2 me-xl-4 mb-0">
+            <NavLink exact="true" to="/" className="h4 me-2 me-xl-4 mb-0">
               <img src={logo} alt="Boulder Bike Tour logo" className="logo mb-0 me-4 me-xl-5" onClick={refreshPage} />
             </NavLink>
           </div>

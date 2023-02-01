@@ -15,7 +15,8 @@ const Riders = () => {
   const [currentRider, setCurrentRider] = useState(null);
 
   const getRidersData = () => {
-    const url = 'https://boulder-bike-tour-backend.herokuapp.com/riders';
+    // const url = 'https://boulder-bike-tour-backend.herokuapp.com/riders';
+    const url = 'http://localhost:3000/riders';
 
     fetch(url, {
       method: "GET",
