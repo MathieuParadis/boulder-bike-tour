@@ -28,6 +28,7 @@ Once every decade, an exciting, prestigious, and inspiring bike race takes place
 ## How to use it:
 ### In development:
 Run [backend](https://github.com/MathieuParadis/boulder-bike-tour-backend) at following address: http://localhost:3000/
+
 Then, clone the repository on your machine, and run:
   ```
   npm install
